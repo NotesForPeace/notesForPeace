@@ -13,64 +13,36 @@
 
         <?php get_header(); ?>
 
-		<!-- Tributes sorted by publish order -->
+		<!-- Table of tributes sorted by last name -->
 		<div class="container">        
-			<h2>Publish Date</h2>
-			<?php
-				$posts = get_posts();
-				foreach ($posts as $post) {
-					// Get post title
-					$post_title = $post->post_title;
-					// Get post url
-					$post_url = get_permalink($post->post_ID);
-					echo '<div>';
-					// Construct post URL
-					echo '<a href="'.$post_url.'">'.$post_title.'</a>';
-					echo '</div>';
-				}
-			?>
+			<h1><?php the_title(); ?></h1>
+			<div class="container">
+				<?php 
+					$posts = get_posts(array(
+						'meta_key' => 'Last Name',
+						'orderby'  => 'meta_value',
+						'order'	   => 'ASC'
+					));
 
-			<h2>First Name</h2>
-			<?php 
-				$posts = get_posts(array(
-					'meta_key'			=> 'First Name',
-					'orderby'			=> 'meta_value',
-					'order'				=> 'ASC'
-				));
+					foreach ($posts as $post) {
+						$tributeID 	 	  = $post->ID;
+						$tributeTitle     = apply_filters( 'the_title', $post->post_title);
+						$tributeURL       = get_permalink($tributeID);
+						$tributeFirstName = get_post_meta($tributeID, 'First Name', true);
+						$tributeLastName  = get_post_meta($tributeID, 'Last Name', true);
 
-				foreach ($posts as $post) {
-					// Get post title
-					$post_title = $post->post_title;
-					// Get post url
-					$post_url = get_permalink($post->post_ID);
-					echo '<div>';
-					// Construct post URL
-					echo '<a href="'.$post_url.'">'.$post_title.'</a>';
-					echo '</div>';
-				}
-			?>
-
-			<h2>Last Name</h2>
-			<?php 
-				$posts = get_posts(array(
-					'meta_key'			=> 'Last Name',
-					'orderby'			=> 'meta_value',
-					'order'				=> 'DESC'
-				));
-
-				foreach ($posts as $post) {
-					// Get post title
-					$post_title = $post->post_title;
-					// Get post url
-					$post_url = get_permalink($post->post_ID);
-					echo '<div>';
-					// Construct post URL
-					echo '<a href="'.$post_url.'">'.$post_title.'</a>';
-					echo '</div>';
-				}
-			?>
-		</div><!-- .container -->
-
+						echo '<div class="row myRow">';
+						echo '<div class="col-2 myCol">';
+							echo '<p>'.$tributeTitle.'</p>';
+						echo '</div>';
+						echo '<div class="col-4 myCol">';
+							  echo '<a href="'.$tributeURL.'">'.'Read more about'.'&nbsp'.$tributeFirstName.'</a>';
+							echo '</div>';
+						echo '</div>';
+					}
+				?>
+			</div>
+		</div>
 
         <?php get_footer(); ?>
 
