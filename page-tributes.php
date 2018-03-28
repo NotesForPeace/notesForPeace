@@ -13,16 +13,64 @@
 
         <?php get_header(); ?>
 
+		<!-- Tributes sorted by publish order -->
+		<div class="container">        
+			<h2>Publish Date</h2>
+			<?php
+				$posts = get_posts();
+				foreach ($posts as $post) {
+					// Get post title
+					$post_title = $post->post_title;
+					// Get post url
+					$post_url = get_permalink($post->post_ID);
+					echo '<div>';
+					// Construct post URL
+					echo '<a href="'.$post_url.'">'.$post_title.'</a>';
+					echo '</div>';
+				}
+			?>
 
-        <!-- Tributes -->
-        <div class="container">
-                <p><a href="<?php get_bloginfo('wpurl'); ?>/george-washington/">George Washington</a></p>
-                <p><a href="<?php get_bloginfo('wpurl'); ?>/thomas-jefferson/">Thomas Jefferson</a></p>
-                <p><a href="<?php get_bloginfo('wpurl'); ?>/abraham-lincoln/">Abraham Lincoln</a></p>
-                <p><a href="<?php get_bloginfo('wpurl'); ?>/theodore-roosevelt/">Theodore Roosevelt</a></p>
-                <p><a href="<?php get_bloginfo('wpurl'); ?>/john-f-kennedy/">John F Kennedy</a></p>
-        </div>
+			<h2>First Name</h2>
+			<?php 
+				$posts = get_posts(array(
+					'meta_key'			=> 'First Name',
+					'orderby'			=> 'meta_value',
+					'order'				=> 'ASC'
+				));
 
-     
+				foreach ($posts as $post) {
+					// Get post title
+					$post_title = $post->post_title;
+					// Get post url
+					$post_url = get_permalink($post->post_ID);
+					echo '<div>';
+					// Construct post URL
+					echo '<a href="'.$post_url.'">'.$post_title.'</a>';
+					echo '</div>';
+				}
+			?>
+
+			<h2>Last Name</h2>
+			<?php 
+				$posts = get_posts(array(
+					'meta_key'			=> 'Last Name',
+					'orderby'			=> 'meta_value',
+					'order'				=> 'DESC'
+				));
+
+				foreach ($posts as $post) {
+					// Get post title
+					$post_title = $post->post_title;
+					// Get post url
+					$post_url = get_permalink($post->post_ID);
+					echo '<div>';
+					// Construct post URL
+					echo '<a href="'.$post_url.'">'.$post_title.'</a>';
+					echo '</div>';
+				}
+			?>
+		</div><!-- .container -->
+
+
         <?php get_footer(); ?>
 
