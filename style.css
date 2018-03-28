@@ -1,0 +1,161 @@
+/*
+    Theme Name: Notes for Peace
+    Theme URI: https://notesforpeace.org
+    Author: the Notes for Peace team
+    Author URI: https://notesforpeace.org
+    Description: Notes for Peace is a positive response to the epidemic of gun violence in our community. We remember the children we have lost and find a common purpose of making a more peaceful Chicago.
+    Version: 0.01
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Text Domain: notesforpeace.org
+*/
+
+/*--------------------------------------------------------------
+# Grid Testing 
+TODO: When development is done, delete these classes!
+--------------------------------------------------------------*/
+.myContainer {
+    border: 1px solid green;
+}
+
+.myRow {
+    border: 1px solid blue;
+}
+.myCol {
+    border: 1px dotted white;
+}
+  
+/*--------------------------------------------------------------
+# NFP Navbar
+--------------------------------------------------------------*/
+.nfp-navbar {
+    border-radius: 0;
+    background-color: #220706;
+    border-bottom: 1px solid #e3dacd;
+}
+
+.nfp-logo {
+    font-size: 60px;
+    font-family: 'Great Vibes', Helvetica, sans-serif;
+    color: #e3dacd;
+}
+
+.nfp-logo2 {
+    font-size: 55px;
+    font-family: 'Great Vibes', Helvetica, sans-serif;
+    color: #e3dacd;
+}
+
+.nfp-navbar .navbar-nav > li {
+    margin-top: 15px;
+}
+.nfp-navbar .navbar-nav > li > a {
+    color: #e3dacd;
+    font-size: 20px;
+    font-family: 'Karla', sans-serif;
+    text-transform: uppercase;
+}
+
+.nfp-navbar .navbar-nav > li > a:hover,
+.nfp-navbar .navbar-nav > li > a:focus {
+    background-color: transparent;
+    color: #FFFFFF;
+}
+
+.nfp-navbar .navbar-toggler {
+    border-color: #e3dacd;
+}
+
+.nfp-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(227,218,205, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.nfp-navbar-search-icon {
+    color: #e3dacd;
+    fill: #e3dacd;
+  }
+
+/*--------------------------------------------------------------
+# NFP Homepage
+--------------------------------------------------------------*/
+.nfp-homepage-image  {
+    position: relative;
+    background-image: url(/wp-content/themes/notesForPeace/assets/images/homepageImage.jpg);
+    height: 50%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nfp-homepage-image-quote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #e3dacd;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100; 
+    font-style: normal;
+}
+
+/*--------------------------------------------------------------
+# NFP Content
+--------------------------------------------------------------*/
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #220706;
+
+    /*TODO: The navbar covers the top of the body. Figure out how 
+    to move the body down without hardcoding the margin-top*/
+    margin-top: 105px; 
+}
+
+h1 {
+    font-size: 38px;
+    font-family: 'Great Vibes', Helvetica, sans-serif;
+    color: #e3dacd;
+}
+
+p {
+    color: #e3dacd;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500; 
+}
+
+
+/*--------------------------------------------------------------
+# NFP Footer
+--------------------------------------------------------------*/
+.nfp-footer {
+    background-color: #220706;
+    border-top: 1px solid #e3dacd;
+}
+
+.nfp-footer a {
+    color: #e3dacd;
+    text-decoration: none;
+}
+
+.nfp-footer a:hover,
+.nfp-footer a:focus {
+    background-color: transparent;
+    color: #FFFFFF;
+    fill: #FFFFFF;
+}
+
+.nfp-footer-icon-soc {
+    color: #e3dacd;
+    fill: #e3dacd;
+  }
+
+.nfp-footer span {
+    color: #e3dacd;
+    font-size: 15px;
+    font-family: 'Karla', sans-serif;
+}
