@@ -1,12 +1,10 @@
 <?php
     //-------------------------------------------------------------------------
-    //Load the Bootstrap files, Font Awesome, Google Fonts, and stylesheet for the NFP Theme
+    //Load the Bootstrap files, Google Fonts, and stylesheet for the NFP Theme
     function enqueue_nfp_scripts() {
         wp_enqueue_script('bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js', array('jquery'));
         wp_enqueue_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
         wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css?family=Karla:400,700|Great+Vibes|Roboto:100,300,400,500,700,900');
-        //wp_register_style( 'fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
-        //wp_enqueue_style( 'fontawesome');
         wp_enqueue_style('nfp-style', get_stylesheet_uri());
     }
     add_action('wp_enqueue_scripts', 'enqueue_nfp_scripts');
@@ -29,9 +27,13 @@
         //If you update the Site Title and Tagline in one place it will update the other
         add_theme_support('title-tag');
 
-        //Allow for featured images (also sometimes called Post Thumbnails). 
-        //A featured image represent an individual Post, Page, or Custom Post Type.
+        //Allow for a post, page, or custom post type to have afeatured images (also called Post Thumbnails). 
         add_theme_support( 'post-thumbnails' );
+
+        //Theme Markup is a theme feature that allows themes to explicitly choose to 
+        //apply HTML5 markup for search forms, comment forms, comment lists, gallery and caption.
+        //I'm only adding HTML5 support for the search form for now.
+        add_theme_support( 'html5', 'search-form' );
     }
     add_action('after_setup_theme', 'nfp_setup' );
 
