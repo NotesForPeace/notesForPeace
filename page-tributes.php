@@ -38,15 +38,30 @@
 			<div class="row">
 				<div class="card-deck">
 						<?php 
-							$posts = get_posts(array(
-								'meta_key' => 'Last Name',
-								'orderby'  => 'meta_value',
-								'order'	   => 'DESC'
-							));
+							$args = array(
+								'posts_per_page'   	=> -1,
+								'offset'           	=> 0,
+								'category'         	=> '',
+								'category_name'    	=> '',
+								'orderby'          	=> 'meta_value',
+								'order'            	=> 'ASC',
+								'include'          	=> '',
+								'exclude'          	=> '',
+								'meta_key'         	=> 'Last Name',
+								'meta_value'       	=> '',
+								'post_type'        	=> 'post',
+								'post_mime_type'   	=> '',
+								'post_parent'      	=> '',
+								'author'			=> '',
+								'author_name'	   	=> '',
+								'post_status'      	=> 'publish',
+								'suppress_filters' 	=> true 
+							);
+							$tributes = get_posts($args);
 
-							foreach ($posts as $post) {
-								$tributeID 	 	  = $post->ID;
-								$tributeTitle     = apply_filters( 'the_title', $post->post_title);
+							foreach ($tributes as $tribute) {
+								$tributeID 	 	  = $tribute->ID;
+								$tributeTitle     = apply_filters( 'the_title', $tribute->post_title);
 								$tributeURL       = get_permalink($tributeID);
 								$tributeFirstName = get_post_meta($tributeID, 'First Name', true);
 								$tributeLastName  = get_post_meta($tributeID, 'Last Name', true);
@@ -70,4 +85,3 @@
 		</div>
 
         <?php get_footer(); ?>
-
