@@ -58,15 +58,15 @@ TODO: When development is done, delete these classes!
 # Links
 ---------------------------------------------------------*/
 .nfp-navbar .navbar-nav > li {
-    margin-top: 15px; /* Align links bottom of the logo */
+    margin-top: 15px; /* Align the links to the bottom of the logo */
 }
+
 .nfp-navbar .navbar-nav > li > a {
     color: #e3dacd;
     font-size: 20px;
     font-family: 'Karla', sans-serif;
     text-transform: uppercase;
-    text-align: right; 
-
+    text-align: right; /* Aligns the links on the right when collapsed*/
 }
 
 .nfp-navbar .navbar-nav > li > a:hover,
@@ -95,11 +95,6 @@ TODO: When development is done, delete these classes!
 	display: block;
 	transition: all 0.2s;
 	margin-top: 4px
-}
-
-.icon-outline {
-    border: 1px solid #e3dacd;
-    border-radius: 1px;
 }
 
 .navbar-toggler .top-bar {
@@ -171,16 +166,30 @@ body {
 }
 
 h1 {
-    font-size: 38px;
     font-family: 'Great Vibes', Helvetica, sans-serif;
+    font-size: 38px;
+    color: #e3dacd;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 100; 
+    color: #e3dacd;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 100; 
     color: #e3dacd;
 }
 
 p {
-    color: #e3dacd;
-    font-size: 15px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 500; 
+    font-size: 15px;
+    font-weight: 300; 
+    color: #e3dacd;
 }
 
 
