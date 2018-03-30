@@ -17,7 +17,7 @@
         <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post(); ?>
                 
-                <div class="container py-4">
+                <div class="container-fluid p-5">
                     <div class="row">
                         <div class="col-md-6 col-lg-12">
                          <h1><?php the_title(); ?></h1>   
