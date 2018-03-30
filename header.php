@@ -27,7 +27,7 @@
     <body <?php body_class(); ?> >
 
         <!-- NfP Navbar -->
-        <nav class="navbar navbar-expand-lg fixed-top nfp-navbar py-0">
+        <nav class="navbar navbar-expand-md fixed-top nfp-navbar py-0">
 
             <!-- NfP Logo -->
             <a class="navbar-brand mr-auto" href="<?php echo get_site_url(); ?>">
@@ -35,8 +35,10 @@
             </a>
 
             <!-- Hamburger Menu -->
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#collapse_target">
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>				
             </button>
 
 

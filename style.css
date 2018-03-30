@@ -10,10 +10,10 @@
     Text Domain: notesforpeace.org
 */
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------------------------------------------
 # Grid Testing 
 TODO: When development is done, delete these classes!
---------------------------------------------------------------*/
+-------------------------------------------------------------------------------------------------*/
 .myContainer {
     border: 1px solid green;
 }
@@ -21,19 +21,27 @@ TODO: When development is done, delete these classes!
 .myRow {
     border: 1px solid blue;
 }
+
 .myCol {
     border: 1px dotted white;
 }
-  
-/*--------------------------------------------------------------
-# NFP Navbar
---------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------------------------------------------
+# NfP Navbar
+-------------------------------------------------------------------------------------------------*/
 .nfp-navbar {
     border-radius: 0;
     background-color: #220706;
     border-bottom: 1px solid #e3dacd;
 }
 
+/*---------------------------------------------------------
+# Logo
+# Using the Great Vibes font, the "for" in Notes for Peace
+# is massive. The nfp-logo2 class is used to tone it down.
+---------------------------------------------------------*/
 .nfp-logo {
     font-size: 60px;
     font-family: 'Great Vibes', Helvetica, sans-serif;
@@ -46,14 +54,19 @@ TODO: When development is done, delete these classes!
     color: #e3dacd;
 }
 
+/*---------------------------------------------------------
+# Links
+---------------------------------------------------------*/
 .nfp-navbar .navbar-nav > li {
-    margin-top: 15px;
+    margin-top: 15px; /* Align links bottom of the logo */
 }
 .nfp-navbar .navbar-nav > li > a {
     color: #e3dacd;
     font-size: 20px;
     font-family: 'Karla', sans-serif;
     text-transform: uppercase;
+    text-align: right; 
+
 }
 
 .nfp-navbar .navbar-nav > li > a:hover,
@@ -62,22 +75,64 @@ TODO: When development is done, delete these classes!
     color: #FFFFFF;
 }
 
-.nfp-navbar .navbar-toggler {
-    border-color: #e3dacd;
+/*---------------------------------------------------------
+# Hamburger Menu
+---------------------------------------------------------*/
+.navbar-toggler {
+    border: none;
+    background: transparent !important;
 }
 
-.nfp-navbar .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(227,218,205, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: 0;
 }
 
-.nfp-navbar-search-icon {
-    color: #e3dacd;
-    fill: #e3dacd;
+.icon-bar {
+	width: 22px; 
+	height: 2px;
+	background-color: #e3dacd;
+	display: block;
+	transition: all 0.2s;
+	margin-top: 4px
+}
+
+.icon-outline {
+    border: 1px solid #e3dacd;
+    border-radius: 1px;
+}
+
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
   }
+   
+  .navbar-toggler .middle-bar {
+    opacity: 0;
+  }
+   
+  .navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+   
+  .navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+  }
+   
+  .navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+  }
+   
+  .navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+  }
+ 
 
-/*--------------------------------------------------------------
-# NFP Homepage
---------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------
+# NfP Homepage
+-------------------------------------------------------------------------------------------------*/
 .nfp-homepage-image  {
     position: relative;
     background-image: url(/wp-content/themes/notesForPeace/assets/images/homepageImage.jpg);
@@ -99,9 +154,9 @@ TODO: When development is done, delete these classes!
     font-style: normal;
 }
 
-/*--------------------------------------------------------------
-# NFP Content
---------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------
+# NfP Content
+-------------------------------------------------------------------------------------------------*/
 html {
     height: 100%;
 }
@@ -129,14 +184,17 @@ p {
 }
 
 
-/*--------------------------------------------------------------
-# NFP Footer
---------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------
+# NfP Footer
+-------------------------------------------------------------------------------------------------*/
 .nfp-footer {
     background-color: #220706;
     border-top: 1px solid #e3dacd;
 }
 
+/*---------------------------------------------------------
+# Contact and Social Media Icons
+---------------------------------------------------------*/
 .nfp-footer a {
     color: #e3dacd;
     text-decoration: none;
@@ -154,6 +212,9 @@ p {
     fill: #e3dacd;
   }
 
+/*---------------------------------------------------------
+# Copyright
+---------------------------------------------------------*/
 .nfp-footer span {
     color: #e3dacd;
     font-size: 15px;
