@@ -1,7 +1,7 @@
 <?php
 /**
  * 
- * The defauot template file for the page post type
+ * The default template file for the page post type
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
