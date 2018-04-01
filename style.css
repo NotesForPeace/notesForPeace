@@ -213,7 +213,41 @@ p {
     background-color: #220706;
     border-top: 1px solid #e3dacd;
 }
+/*---------------------------------------------------------
+# Search Page
+---------------------------------------------------------*/
+#ajaxsearchlite1 .nfp-search .probox, div.asl_w .probox{
+    background-color: rgba(86, 65, 64, 1) !important;
+}
 
+#ajaxsearchlite1 .nfp-search  .wpdreams_asl_container .asl_w asl_m asl_m_1{
+    border-radius: 3px !important;
+}
+
+div.asl_r.vertical{
+    background: #220706 !important;
+    border: none !important;
+    padding: 0px !important;
+}
+
+div.asl_r .results .item{
+    background: #220706 !important;
+    border: none !important;
+    padding: 0px !important;
+}
+
+.wpdreams_asl_results .asl_spacer, .asl_content{
+    background: #220706 !important;
+    padding: 0px !important;
+}
+
+.promagnifier, #ajaxsearchlite1{
+    box-shadow: none !important;
+}
+
+.proinput ::placeholder{
+    color: white !important;
+}
 /*---------------------------------------------------------
 # Contact and Social Media Icons
 ---------------------------------------------------------*/
