@@ -31,8 +31,21 @@ TODO: When development is done, delete these classes!
 /*-------------------------------------------------------------------------------------------------
 # NfP Navbar
 -------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------
+# Navbar Container
+---------------------------------------------------------*/
+.navbar {
+    min-height: 73px;
+}
+  
+.navbar-brand {
+    padding: 0 15px;
+    height: 73px;
+    line-height: 80px;
+}
+
 .nfp-navbar {
-    border-radius: 0;
     background-color: #220706;
     border-bottom: 1px solid #e3dacd;
 }
@@ -58,7 +71,7 @@ TODO: When development is done, delete these classes!
 # Links
 ---------------------------------------------------------*/
 .nfp-navbar .navbar-nav > li {
-    margin-top: 15px; /* Align the links to the bottom of the logo */
+    margin-top: 25px; /* Align the links to the bottom of the logo */
 }
 
 .nfp-navbar .navbar-nav > li > a {
@@ -228,12 +241,4 @@ p {
     color: #e3dacd;
     font-size: 15px;
     font-family: 'Karla', sans-serif;
-}
-
-
-/*-------------------------------------------------------------------------------------------------
-# NfP Faceted Search
--------------------------------------------------------------------------------------------------*/
-.facetwp-counter {
-    display: none;
 }
