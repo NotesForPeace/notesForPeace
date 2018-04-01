@@ -43,7 +43,7 @@
 					<?php get_sidebar(); ?> 
 				</div>
 				<div class="col-lg-9">
-					<div class="card-deck justify-content-center facetwp-template">
+					<div class="card-deck justify-content-center">
 							<?php 
 								$args = array(
 									'posts_per_page' => -1, 			//-1 to return all posts
@@ -51,8 +51,7 @@
 									'order'          => 'ASC', 			//Ascending, use DESC for descending
 									'meta_key'       => 'Last Name',    //TODO: We should move all the custom field key names into some centralized location
 									'post_type'      => 'post',			//TODO: We need to finalize our data model
-									'post_status'    => 'publish',		//Get only the posts that are meant to be public
-									'facetwp'        => true 			//Tell FacetWP that these are the posts to filter
+									'post_status'    => 'publish'		//Get only the posts that are meant to be public
 								);
 								$tributes = get_posts($args);
 
