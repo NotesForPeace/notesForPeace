@@ -57,9 +57,9 @@
 
                 </div>
 
-                <!-- Parting Message -->
+                <!-- Message -->
                 <div class="row justify-content-center">
-                        <span>Thank you for visiting from the <a href="<?php get_bloginfo('wpurl'); ?>/about">Notes for Peace Team</a></span>
+                        <span class="nfp-footer-message">Thank you for visiting.</span>
                 </div>
 
             </div>

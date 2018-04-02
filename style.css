@@ -33,7 +33,7 @@
 ===================================================================================================*/
 
 /*---------------------------------------------------------
-# Navbar Container
+# Container
 ---------------------------------------------------------*/
 .nfp-navbar {
     background-color: #220706;
@@ -46,14 +46,14 @@
 # is massive. The nfp-logo2 class is used to tone it down.
 ---------------------------------------------------------*/
 .nfp-logo {
-    font-size: 60px;
     font-family: 'Great Vibes', Helvetica, sans-serif;
+    font-size: 60px;
     color: #e3dacd;
 }
 
 .nfp-logo2 {
-    font-size: 55px;
     font-family: 'Great Vibes', Helvetica, sans-serif;
+    font-size: 55px;
     color: #e3dacd;
 }
 
@@ -61,15 +61,17 @@
 # Links
 ---------------------------------------------------------*/
 .nfp-navbar .navbar-nav > li {
-    margin-top: 17px; /* Align the links to the bottom of the logo */
+    margin-top: 18px; /* Align the links to the bottom of the logo */
 }
 
 .nfp-navbar .navbar-nav > li > a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 100;
+    letter-spacing: 0.05em;
     color: #e3dacd;
-    font-size: 20px;
-    font-family: 'Karla', sans-serif;
-    text-transform: uppercase;
     text-align: right; /* Aligns the links on the right when collapsed*/
+    text-transform: uppercase;
 }
 
 .nfp-navbar .navbar-nav > li > a:hover,
@@ -89,8 +91,8 @@
 # Hamburger Menu
 ---------------------------------------------------------*/
 .navbar-toggler {
-    border: none;
     background: transparent !important;
+    border: none;
 }
 
 .navbar-toggler:focus,
@@ -176,9 +178,11 @@ body {
 }
 
 h1 {
-    font-family: 'Great Vibes', Helvetica, sans-serif;
-    font-size: 38px;
     color: #e3dacd;
+    font-size: 30px;
+    font-family: 'Libre Baskerville', serif;
+    font-style: 'regular';
+    letter-spacing: 0.02em;
 }
 
 h2 {
@@ -196,10 +200,12 @@ h3 {
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 300; 
     color: #e3dacd;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    line-height: 27px;     
+    letter-spacing: 0.02em;
 }
 
 
@@ -208,7 +214,7 @@ p {
 ===================================================================================================*/
 
 /*---------------------------------------------------------
-# Footer container
+# Container
 ---------------------------------------------------------*/
 .nfp-footer {
     background-color: #220706;
@@ -236,9 +242,9 @@ p {
   }
 
 /*---------------------------------------------------------
-# Parting Message
+# Message
 ---------------------------------------------------------*/
-.nfp-footer span {
+.nfp-footer-message {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     font-weight: 300; 
