@@ -27,7 +27,7 @@
     <body <?php body_class(); ?> >
 
         <!-- NfP Navbar -->
-        <nav class="navbar navbar-expand-md fixed-top nfp-navbar py-0">
+        <nav class="navbar navbar-expand-sm fixed-top nfp-navbar py-0">
 
             <!-- NfP Logo -->
             <a class="navbar-brand mr-auto" href="<?php echo get_site_url(); ?>">
@@ -49,7 +49,6 @@
             <?php
                 wp_nav_menu( array(
                     'theme_location'    => 'primary',
-                    'depth'             => 2,
                     'container'         => 'div',
                     'container_class'   => 'collapse navbar-collapse',
                     'container_id'      => 'collapse_target',
