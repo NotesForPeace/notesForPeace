@@ -57,9 +57,9 @@
 
                 </div>
 
-                <!-- Copyright -->
+                <!-- Parting Message -->
                 <div class="row justify-content-center">
-                        <span>©2018 Copyright: <a href="<?php echo get_site_url(); ?>">Notes for Peace</a></span>
+                        <span>Thank you for visiting from the <a href="<?php get_bloginfo('wpurl'); ?>/about">Notes for Peace Team</a></span>
                 </div>
 
             </div>
