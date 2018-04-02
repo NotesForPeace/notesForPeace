@@ -35,16 +35,6 @@ TODO: When development is done, delete these classes!
 /*---------------------------------------------------------
 # Navbar Container
 ---------------------------------------------------------*/
-.navbar {
-    min-height: 73px;
-}
-  
-.navbar-brand {
-    padding: 0 15px;
-    height: 73px;
-    line-height: 80px;
-}
-
 .nfp-navbar {
     background-color: #220706;
     border-bottom: 1px solid #e3dacd;
@@ -71,7 +61,7 @@ TODO: When development is done, delete these classes!
 # Links
 ---------------------------------------------------------*/
 .nfp-navbar .navbar-nav > li {
-    margin-top: 25px; /* Align the links to the bottom of the logo */
+    margin-top: 17px; /* Align the links to the bottom of the logo */
 }
 
 .nfp-navbar .navbar-nav > li > a {
@@ -86,6 +76,13 @@ TODO: When development is done, delete these classes!
 .nfp-navbar .navbar-nav > li > a:focus {
     background-color: transparent;
     color: #FFFFFF;
+}
+
+@media only screen and (max-width : 576px) {
+    #collapse_target > ul >li > a {
+        border-top: 1px dotted #e3dacd;
+        padding-right: 15px;
+    }    
 }
 
 /*---------------------------------------------------------
