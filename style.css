@@ -322,3 +322,30 @@ div.asl_r .results .item {
     color: white !important;
 }
 
+
+/*=================================================================================================
+# Tributes Page
+===================================================================================================*/
+#nfp-search-bar {
+    border-radius: 0px;
+    color: #e3dacd;
+    border: none;
+    background-color: #472727;
+}
+
+#nfp-search-bar::placeholder{
+    color: #e3dacd;
+}
+
+#nfp-search-bar:focus{
+    box-shadow: none;
+}
+
+.nfp-tribute-img{
+    border-radius: 0px;
+    height: 250px;
+}
+
+.nfp-tribute-card{
+    background-color: transparent;
+}
