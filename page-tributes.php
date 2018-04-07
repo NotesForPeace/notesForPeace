@@ -14,38 +14,39 @@
 		<?php get_header(); ?>
 		
 
-		<!-- Title of the Tributes Page -->
+		<!-- Tribute Page Header -->
 		<?php if ( have_posts() ) : ?>
-            <?php while ( have_posts() ) : the_post(); ?>
-                
-                <div class="container-fluid p-5">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-12">
-                         <h1><?php the_title(); ?></h1>   
-                        </div>
-                    </div>
-                </div>
-                
-            <?php endwhile; ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				
+				<div class="container-fluid pt-4">
+					<div class="row justify-content-center">
+						<div class="col d-flex justify-content-center">
+							<h1><?php the_title(); ?></h1>   
+						</div>
+					</div>
+				</div>
+				
+			<?php endwhile; ?>
 		<?php endif; ?>
 		
 
 		<!-- Search Bar -->
-		<div class='row justify-content-around'>
-			<div class="col-10 col-lg-6">
-				<div class="input-group">
-					<input type="text" id="nfp-search-bar" class="form-control nfp-search-bar" placeholder="Search for..." onkeyup="search_input()">
+		<div class="container-fluid p-0">
+			<div class='row justify-content-center'>
+				<div class="col-10 col-sm-5 col-md-8 col-lg-7 col-xl-8 px-0">
+					<div class="input-group">
+						<input type="text" id="nfp-search-bar" class="form-control nfp-search-bar" placeholder="Search for..." onkeyup="search_input()">
+					</div>
 				</div>
 			</div>
 		</div>
 
 
 		<!-- Grid of Tribute Cards -->
-		<div class="container-fluid px-5 mt-4 myContainer">
-		<div class="row justify-content-center">
-
-			<div class="col-10">
-				<div class="card-deck justify-content-center">
+		<div class="container-fluid px-5 mt-4">
+			<div class="row justify-content-center">
+				<div class="col d-flex justify-content-center">
+					<div class="card-deck justify-content-center ">
 						<?php 
 							$args = array(
 								'posts_per_page' => -1, 			//-1 to return all posts
@@ -68,28 +69,20 @@
 								
 								echo '<div class="nfp-card-wrapper" first_name="'.$tributeFirstName.'" last_name="'.$tributeLastName.'">';
 									echo '<a href="'.$tributeURL.'">';
-										echo '<div class="card ml-3 mb-4 rounded-0 nfp-tribute-card" style="min-width: 250px; max-width: 250px; min-height: 250px; max-height: 250px;">';
-											echo '<img class="card-img img-responsive nfp-tribute-img" src="'.$tributeImageURL[0].'" alt="Card image cap">';
-											echo '<div class="card-img-overlay">';
-											echo '<div class="card-header bg-transparent border-success">Header</div>';
-											echo '<div class="card-body text-success">';
-											echo '<h5 class="card-title">Success card title</h5>';
-											echo '<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>';												;
-											echo '</div>';
-											echo '<div class="card-footer bg-transparent border-success">Footer</div>';
-											echo '</div>';
-											// echo '<h5 class="card-title">'.$tributeTitle.'</h5>';
-											// echo '<div class="card-body">';
-											// 	echo '<p class="card-text">'.$tributeSummary.'</p>';
-											// echo '</div>';
+										echo '<div class="card mb-4 nfp-tribute-card">';
+											echo '<img class="card-img-top nfp-tribute-card-image" src="'.$tributeImageURL[0].'">';
+											echo '<p>'.$tributeTitle.'</p>';
 										echo '</div>';
 									echo '</a>';
 								echo '</div>';
-							} //foreach
+							}
 						?>
+					</div>
 				</div>
 			</div>
-			</div>
-			</div>
+		</div>
+
+		<br />
+		<br />
 
         <?php get_footer(); ?>

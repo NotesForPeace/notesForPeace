@@ -326,6 +326,10 @@ div.asl_r .results .item {
 /*=================================================================================================
 # Tributes Page
 ===================================================================================================*/
+
+/*---------------------------------------------------------
+# Search Bar
+---------------------------------------------------------*/
 #nfp-search-bar {
     border-radius: 0px;
     color: #e3dacd;
@@ -333,19 +337,34 @@ div.asl_r .results .item {
     background-color: #472727;
 }
 
-#nfp-search-bar::placeholder{
+#nfp-search-bar::placeholder {
     color: #e3dacd;
 }
 
-#nfp-search-bar:focus{
+#nfp-search-bar:focus {
     box-shadow: none;
 }
 
-.nfp-tribute-img{
+/*---------------------------------------------------------
+# Cards in Grid
+---------------------------------------------------------*/
+.nfp-tribute-card-img {
     border-radius: 0px;
-    height: 250px;
 }
 
-.nfp-tribute-card{
-    background-color: transparent;
+.nfp-tribute-card {
+    width: 200px;
+    background-color: #e3dacd;
+    border-radius: 0px;
+}
+
+.card > p {
+    font-size: 13px;
+    color: #220706;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.nfp-card-wrapper > a {
+    text-decoration: none;
 }
