@@ -12,19 +12,38 @@
 ?>
 
         <?php get_header(); ?>
-
-            <div class="row justify-content-center">
-				<div class="col-7 nfp-search">
-					<!-- Faceted Search -->
-					<?php get_sidebar(); ?> 
+        
+        <!-- Search Page Header -->
+		<?php if ( have_posts() ) : ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				
+				<div class="container pt-4">
+					<div class="row">
+						<div class="col">
+							<h1><?php the_title(); ?></h1>   
+						</div>
+					</div>
 				</div>
+				
+			<?php endwhile; ?>
+		<?php endif; ?>
+
+        <?php $search = new WP_Advanced_Search('tributeSearch');?>
+
+        <div class="container">
+            <div class="row">
+
+                <div id="facetedSearch" class="col-1">
+                    <?php $search->the_form(); ?>
+                </div>
+
+                <div class="col-11">
+                    <!-- This is results will be loaded -->
+                    <div id="wpas-results"></div> 
+                </div>
 
             </div>
-            <div class='row' style="height:65vh">
-            <hr>
-            </div>
-                
+        </div>
 
 
-<?php get_footer(); ?>
-
+        <?php get_footer(); ?>

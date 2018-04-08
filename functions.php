@@ -65,4 +65,73 @@
     // Utility that bridges custom menus from Wordpress with Bootstrap 4
     //---------------------------------------------------------------------------------------------
     require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
+
+
+    //---------------------------------------------------------------------------------------------
+    // Utility library to build faceted search
+    //---------------------------------------------------------------------------------------------
+    require_once('wp-advanced-search/wpas.php');
+
+    function facetedSearch() {
+        $args = array();
+
+        $args['wp_query'] = array(
+            'posts_per_page' => -1, 			//-1 to return all posts
+            'orderby'        => 'meta_value', 	//Meta values and custom fields are the same thing
+            'order'          => 'ASC', 			//Ascending, use DESC for descending
+            'meta_key'       => 'Last Name',    //TODO: We should move all the custom field key names into some centralized location
+            'post_type'      => 'post',			//TODO: We need to finalize our data model
+            'post_status'    => 'publish'		//Get only the posts that are meant to be public
+        );
+    
+        $args['form'] = array( 'auto_submit' => true );
+    
+        $args['form']['ajax'] = array( 'enabled'                => true,
+                                       'show_default_results'   => true,
+                                       'results_template'       => 'template-ajax-results.php', // This file must exist in your theme root
+                                       'button_text'            => 'Load More Results');
+
+        $args['fields'][] = array( 
+            'type'  => 'reset',
+            'class' => 'button',
+            'value' => 'Clear' );
+
+        $args['fields'][] = array( 
+            'type'      => 'meta_key', 
+            'format'    => 'checkbox',
+            'meta_key'  => 'Alphabet',
+            'values'    => array(
+                            'a' => 'A',
+                            'b' => 'B',
+                            'c' => 'C',
+                            'd' => 'D',
+                            'e' => 'E',
+                            'f' => 'F',
+                            'g' => 'G',
+                            'h' => 'H',
+                            'i' => 'I',
+                            'j' => 'J',
+                            'k' => 'K', 
+                            'l' => 'L',
+                            'm' => 'M',
+                            'n' => 'N',
+                            'o' => 'O',
+                            'p' => 'P',
+                            'q' => 'Q',
+                            'r' => 'R',
+                            's' => 'S',
+                            't' => 'T',
+                            'u' => 'U',
+                            'v' => 'V',
+                            'w' => 'W',
+                            'x' => 'X',
+                            'y' => 'Y',
+                            'z' => 'Z'),
+            'compare' => 'IN'
+        );  
+    
+        register_wpas_form('tributeSearch', $args);
+    }
+    add_action('init', 'facetedSearch');
 ?>

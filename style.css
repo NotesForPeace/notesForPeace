@@ -289,7 +289,22 @@ p {
 /*=================================================================================================
 # Search Page
 ===================================================================================================*/
-#ajaxsearchlite1 .nfp-search .probox, div.asl_w .probox{
+
+/*---------------------------------------------------------
+# Faceted Search
+---------------------------------------------------------*/
+label {
+    display: inline-block;
+    margin-bottom: 0;
+    color: #e3dacd;
+}
+
+
+/*---------------------------------------------------------
+# CSS to Overide Ajax Search Lite Plugin 
+# TODO: Delete this or uncomment it if we use it
+---------------------------------------------------------*/
+/* #ajaxsearchlite1 .nfp-search .probox, div.asl_w .probox{
     background-color: rgba(86, 65, 64, 1) !important;
 }
 
@@ -320,7 +335,7 @@ div.asl_r .results .item {
 
 .proinput ::placeholder {
     color: white !important;
-}
+} */
 
 
 /*=================================================================================================
