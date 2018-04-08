@@ -17,7 +17,7 @@
         <div class="container myContainer">
             <div class="row myRow">
 
-                <!-- Victim Image -->
+                <!-- Individual's Image -->
                 <div class="col-sm-6 myCol">
                     <?php if (has_post_thumbnail( $post->ID ) ): ?>
                         <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
@@ -25,20 +25,20 @@
                     <?php endif; ?>
                 </div>
  
-                <!-- Victim Information -->
+                <!-- Individual's Information -->
                 <div class="col-sm-6 myCol">
     
                     <!-- Name -->
                     <div class="row myRow">
                         <div class="col-sm-12 myCol">
-                            <h1><?php $key="First Name"; echo get_post_meta($post->ID, $key, true); ?> <?php $key="Last Name"; echo get_post_meta($post->ID, $key, true); ?></h1>
+                            <h1><?php $key="individual_first_name"; echo get_post_meta($post->ID, $key, true); ?> <?php $key="individual_last_name"; echo get_post_meta($post->ID, $key, true); ?></h1>
                         </div>
                     </div>
 
                     <!-- Birth and Death Date -->
                     <div class="row myRow">
                         <div class="col-sm-12 myCol">
-                            <p><?php $key="Birth Date Display"; echo get_post_meta($post->ID, $key, true); ?> - <?php $key="Death Date Display"; echo get_post_meta($post->ID, $key, true); ?>
+                            <p><?php $key="individual_birth_date"; echo get_post_meta($post->ID, $key, true); ?> - <?php $key="individual_death_date"; echo get_post_meta($post->ID, $key, true); ?>
                         </div>
                     </div>
 
@@ -49,10 +49,10 @@
                         </div>
                     </div>
 
-                    <!-- Summary -->
+                    <!-- Tagline -->
                     <div class="row myRow">
                         <div class="col-sm-12 myCol">
-                           <p><?php $key="Summary"; echo get_post_meta($post->ID, $key, true); ?></p>
+                           <p><?php $key="individual_tagline"; echo get_post_meta($post->ID, $key, true); ?></p>
                         </div>
                     </div>
                 </div>

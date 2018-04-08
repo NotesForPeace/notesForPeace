@@ -77,12 +77,12 @@
         $args = array();
 
         $args['wp_query'] = array(
-            'posts_per_page' => -1, 			//-1 to return all posts
-            'orderby'        => 'meta_value', 	//Meta values and custom fields are the same thing
-            'order'          => 'ASC', 			//Ascending, use DESC for descending
-            'meta_key'       => 'Last Name',    //TODO: We should move all the custom field key names into some centralized location
-            'post_type'      => 'post',			//TODO: We need to finalize our data model
-            'post_status'    => 'publish'		//Get only the posts that are meant to be public
+            'posts_per_page' => -1, 			        //-1 to return all posts
+            'orderby'        => 'meta_value', 	        //Meta values and custom fields are the same thing
+            'order'          => 'ASC', 			        //Ascending, use DESC for descending
+            'meta_key'       => 'individual_last_name', //TODO: We should move all the custom field key names into some centralized location
+            'post_type'      => 'tribute',              //TODO: We need to finalize our data model
+            'post_status'    => 'publish'		        //Get only the posts that are meant to be public
         );
     
         $args['form'] = array( 'auto_submit' => true );
@@ -100,7 +100,7 @@
         $args['fields'][] = array( 
             'type'      => 'meta_key', 
             'format'    => 'checkbox',
-            'meta_key'  => 'Alphabet',
+            'meta_key'  => 'individual_alpha_sort',
             'values'    => array(
                             'a' => 'A',
                             'b' => 'B',
@@ -128,7 +128,7 @@
                             'x' => 'X',
                             'y' => 'Y',
                             'z' => 'Z'),
-            'compare' => 'IN'
+            'compare'   => 'IN',
         );  
     
         register_wpas_form('tributeSearch', $args);

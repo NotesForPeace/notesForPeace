@@ -1,7 +1,7 @@
 function search_input(){
     var search_el = document.getElementsByClassName('nfp-search-bar')[0];
     all_cards = document.getElementsByClassName('nfp-card-wrapper');
-    cards_to_show = document.querySelectorAll('[first_name*="'+search_el.value+'" i], [last_name*="'+search_el.value+'" i]');
+    cards_to_show = document.querySelectorAll('[individual_first_name*="'+search_el.value+'" i], [individual_last_name*="'+search_el.value+'" i]');
     for (var i=0;i<all_cards.length;i++){
         var this_card = all_cards[i];
         var match = false;

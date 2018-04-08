@@ -49,12 +49,12 @@
 					<div class="card-deck justify-content-center ">
 						<?php 
 							$args = array(
-								'posts_per_page' => -1, 			//-1 to return all posts
-								'orderby'        => 'meta_value', 	//Meta values and custom fields are the same thing
-								'order'          => 'ASC', 			//Ascending, use DESC for descending
-								'meta_key'       => 'Last Name',    //TODO: We should move all the custom field key names into some centralized location
-								'post_type'      => 'post',			//TODO: We need to finalize our data model
-								'post_status'    => 'publish'		//Get only the posts that are meant to be public
+								'posts_per_page' => -1, 					//-1 to return all posts
+								'orderby'        => 'meta_value', 			//Meta values and custom fields are the same thing
+								'order'          => 'ASC', 					//Ascending, use DESC for descending
+								'meta_key'       => 'individual_last_name',	//TODO: We should move all the custom field key names into some centralized location
+								'post_type'      => 'tribute',				//TODO: We need to finalize our data model
+								'post_status'    => 'publish'				//Get only the posts that are meant to be public
 							);
 							$tributes = get_posts($args);
 
@@ -62,12 +62,12 @@
 								$tributeID 	 	  = $tribute->ID;
 								$tributeTitle     = apply_filters( 'the_title', $tribute->post_title);
 								$tributeURL       = get_permalink($tributeID);
-								$tributeFirstName = get_post_meta($tributeID, 'First Name', true);
-								$tributeLastName  = get_post_meta($tributeID, 'Last Name', true);
-								$tributeSummary   = get_post_meta($tributeID, 'Summary', true);
+								$tributeFirstName = get_post_meta($tributeID, 'individual_first_name', true);
+								$tributeLastName  = get_post_meta($tributeID, 'individual_last_name', true);
+								$tributeSummary   = get_post_meta($tributeID, 'individual_tagline', true);
 								$tributeImageURL  = wp_get_attachment_image_src( get_post_thumbnail_id( $tributeID ), 'single-post-thumbnail' );
 								
-								echo '<div class="nfp-card-wrapper" first_name="'.$tributeFirstName.'" last_name="'.$tributeLastName.'">';
+								echo '<div class="nfp-card-wrapper" individual_first_name="'.$tributeFirstName.'" individual_last_name="'.$tributeLastName.'">';
 									echo '<a href="'.$tributeURL.'">';
 										echo '<div class="card mb-4 nfp-tribute-card">';
 											echo '<img class="card-img-top nfp-tribute-card-image" src="'.$tributeImageURL[0].'">';
