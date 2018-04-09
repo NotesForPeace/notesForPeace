@@ -31,14 +31,14 @@
                     <!-- Name -->
                     <div class="row myRow">
                         <div class="col-sm-12 myCol">
-                            <h1><?php $key="individual_first_name"; echo get_post_meta($post->ID, $key, true); ?> <?php $key="individual_last_name"; echo get_post_meta($post->ID, $key, true); ?></h1>
+                            <h1><?php echo get_field('individual_first_name') ?> <?php echo get_field('individual_last_name') ?></h1>
                         </div>
                     </div>
 
                     <!-- Birth and Death Date -->
                     <div class="row myRow">
                         <div class="col-sm-12 myCol">
-                            <p><?php $key="individual_birth_date"; echo get_post_meta($post->ID, $key, true); ?> - <?php $key="individual_death_date"; echo get_post_meta($post->ID, $key, true); ?>
+                            <p><?php echo date("F j, Y", strtotime(get_field('individual_birth_date'))); ?> - <?php echo date("F j, Y", strtotime(get_field('individual_death_date'))); ?>
                         </div>
                     </div>
 
@@ -52,7 +52,7 @@
                     <!-- Tagline -->
                     <div class="row myRow">
                         <div class="col-sm-12 myCol">
-                           <p><?php $key="individual_tagline"; echo get_post_meta($post->ID, $key, true); ?></p>
+                           <p><?php echo get_field('individual_tagline') ?></p>
                         </div>
                     </div>
                 </div>
@@ -63,4 +63,6 @@
         <div class="contain py-3" style="margin-top: 10px; border-top: 4px solid #e3dacd;">
 
         </div>
+
         <?php get_footer(); ?>
+        

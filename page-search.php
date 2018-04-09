@@ -33,11 +33,11 @@
         <div class="container">
             <div class="row">
 
-                <div id="facetedSearch" class="col-1">
+                <div id="facetedSearch" class="col-2">
                     <?php $search->the_form(); ?>
                 </div>
 
-                <div class="col-11">
+                <div class="col-10">
                     <!-- This is results will be loaded -->
                     <div id="wpas-results"></div> 
                 </div>
