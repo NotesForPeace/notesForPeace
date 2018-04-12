@@ -64,26 +64,34 @@
             <div class="row justify-content-center">
                 <div class="col-sm-8">
                     <!--Section Navigation -->
-                    <div class="row individual-section-titles">
-                        <div class="list-inline" id="list-tab" role="tablist">
-                            <a class="list-inline-item list-inline-item-action active" id="list-about-list" data-toggle="list" href="#list-about" role="tab" aria-controls="about">About <?php echo get_field('individual_first_name') ?></a>
-                            <a class="list-inline-item list-inline-item-action" id="list-song-list" data-toggle="list" href="#list-song" role="tab" aria-controls="song">Song</a>
-                            <a class="list-inline-item list-inline-item-action" id="list-letter-list" data-toggle="list" href="#list-letter" role="tab" aria-controls="letter">Letter</a>
-                        </div>
+                    
+                    <div class="row individual-section-titles justify-content-center">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-about-tab" data-toggle="pill" href="#pills-about" role="tab" aria-controls="pills-about" aria-selected="true">About <?php echo get_field('individual_first_name') ?></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-song-tab" data-toggle="pill" href="#pills-song" role="tab" aria-controls="pills-song" aria-selected="false">Song</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-letter-tab" data-toggle="pill" href="#pills-letter" role="tab" aria-controls="pills-letter" aria-selected="false">Letter From Parents</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-content" id="pills-tabContent">
                         <!--About section-->
-                        <div class="tab-pane fade show active media" id="list-about" role="tabpanel" aria-labelledby="list-about-list">
+                        
+                        <div class="tab-pane fade show active media" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
                             <div class="media-body about-individual-text">
                                 <p>This is where the text about the individual will go</p>
                             </div>
                         </div>
                         <!--Song section-->
-                        <div class="tab-pane fade" id="list-song" role="tabpanel" aria-labelledby="list-song-list">
+                        <div class="tab-pane fade" id="pills-song" role="tabpanel" aria-labelledby="pills-song-tab">
                             <p>insert song lyrics</p>
                         </div>
                         <!--Letter section-->
-                        <div class="tab-pane fade" id="list-letter" role="tabpanel" aria-labelledby="list-letter-list">
+                        <div class="tab-pane fade" id="pills-letter" role="tabpanel" aria-labelledby="pills-letter-tab">
                             <p>Letters from parents or a loved one will go in this section</p>
                         </div>
                     </div>
