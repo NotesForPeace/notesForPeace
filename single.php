@@ -61,7 +61,34 @@
 
         <!-- Tribute Content -->
         <div class="contain py-3" style="margin-top: 10px; border-top: 4px solid #e3dacd;">
-
+            <div class="row justify-content-center">
+                <div class="col-sm-8">
+                    <!--Section Navigation -->
+                    <div class="row individual-section-titles">
+                        <div class="list-inline" id="list-tab" role="tablist">
+                            <a class="list-inline-item list-inline-item-action active" id="list-about-list" data-toggle="list" href="#list-about" role="tab" aria-controls="about">About <?php echo get_field('individual_first_name') ?></a>
+                            <a class="list-inline-item list-inline-item-action" id="list-song-list" data-toggle="list" href="#list-song" role="tab" aria-controls="song">Song</a>
+                            <a class="list-inline-item list-inline-item-action" id="list-letter-list" data-toggle="list" href="#list-letter" role="tab" aria-controls="letter">Letter</a>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="nav-tabContent">
+                        <!--About section-->
+                        <div class="tab-pane fade show active media" id="list-about" role="tabpanel" aria-labelledby="list-about-list">
+                            <div class="media-body about-individual-text">
+                                <p>This is where the text about the individual will go</p>
+                            </div>
+                        </div>
+                        <!--Song section-->
+                        <div class="tab-pane fade" id="list-song" role="tabpanel" aria-labelledby="list-song-list">
+                            <p>insert song lyrics</p>
+                        </div>
+                        <!--Letter section-->
+                        <div class="tab-pane fade" id="list-letter" role="tabpanel" aria-labelledby="list-letter-list">
+                            <p>Letters from parents or a loved one will go in this section</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <?php get_footer(); ?>
