@@ -383,3 +383,31 @@ div.asl_r .results .item {
 .nfp-card-wrapper > a {
     text-decoration: none;
 }
+
+/*---------------------------------------------------------
+# Tribute Header
+---------------------------------------------------------*/
+/*if we wanted to, we could mask the image to fade to transparent like in the example. That wouldn't work on all browsers though, so it might be best to leave it. https://css-tricks.com/clipping-masking-css/
+.individual-main-image {
+    -webkit-mask-image:-webkit-gradient(radial, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
+}*/
+
+.nav-item>.active {
+    background: none !important;
+}
+
+.nav-item>a {
+    color: #e3dacd;
+    font-size: 25px;
+    font-family: 'Libre Baskerville', serif;
+    font-style: 'regular';
+    letter-spacing: 0.02em;
+    text-transform: small-caps !important;
+}
+/*instead of putting it within the link, could put it after and do active + .link-border-bottom*/
+.active>.link-border-bottom {
+    width: 80%;
+    height: 1px;
+    margin: 0px auto;
+    border-bottom: 1px solid rgb(193, 124, 116);
+}

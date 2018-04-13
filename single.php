@@ -68,13 +68,19 @@
                     <div class="row individual-section-titles justify-content-center">
                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="pills-about-tab" data-toggle="pill" href="#pills-about" role="tab" aria-controls="pills-about" aria-selected="true">About <?php echo get_field('individual_first_name') ?></a>
+                                <a class="nav-link active" id="pills-about-tab" data-toggle="pill" href="#pills-about" role="tab" aria-controls="pills-about" aria-selected="true">About <?php echo get_field('individual_first_name') ?>
+                                    <div class="link-border-bottom"></div>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="pills-song-tab" data-toggle="pill" href="#pills-song" role="tab" aria-controls="pills-song" aria-selected="false">Song</a>
+                                <a class="nav-link" id="pills-song-tab" data-toggle="pill" href="#pills-song" role="tab" aria-controls="pills-song" aria-selected="false">Song
+                                    <div class="link-border-bottom"></div>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="pills-letter-tab" data-toggle="pill" href="#pills-letter" role="tab" aria-controls="pills-letter" aria-selected="false">Letter From Parents</a>
+                                <a class="nav-link" id="pills-letter-tab" data-toggle="pill" href="#pills-letter" role="tab" aria-controls="pills-letter" aria-selected="false">Letter From Parents
+                                    <div class="link-border-bottom"></div>
+                                </a>
                             </li>
                         </ul>
                     </div>
