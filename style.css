@@ -391,6 +391,34 @@ div.asl_r .results .item {
 .individual-main-image {
     -webkit-mask-image:-webkit-gradient(radial, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
 }*/
+/* .single-tribute{
+    margin: 0;
+} */
+/* see notes about mobile compatibility: https://stackoverflow.com/a/25517025/1238019 */
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.individual-information h2{
+    color: #e3dacd;
+    font-size: 20px;
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    text-align: center;
+}
+
+.individual-information h1{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+.individual-information p {
+    text-align: center;
+    padding-bottom: 0;
+    margin: 0;
+}
+
 
 .nav-item>.active {
     background: none !important;
@@ -402,12 +430,17 @@ div.asl_r .results .item {
     font-family: 'Libre Baskerville', serif;
     font-style: 'regular';
     letter-spacing: 0.02em;
-    text-transform: small-caps !important;
+    text-transform: uppercase;
 }
 /*instead of putting it within the link, could put it after and do active + .link-border-bottom*/
-.active>.link-border-bottom {
+.active>hr, .individual-information hr {
     width: 80%;
-    height: 1px;
+    height: 2px;
     margin: 0px auto;
-    border-bottom: 1px solid rgb(193, 124, 116);
+    border-bottom: 2px solid rgb(193, 124, 116);
+    padding: 0 !important;
+}
+.individual-information hr {
+    width: 50%;
+    margin-bottom: 30px;
 }
