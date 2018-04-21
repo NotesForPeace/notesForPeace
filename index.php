@@ -20,11 +20,54 @@
 
         <!-- Homepage Image and Quote -->
         <!-- To change the homepage image, update the backaground image in the nfp-homepage-image class -->
-        <div class="nfp-homepage-image">
-            <span class="nfp-homepage-image-quote" align="center">
-                We hope that our songs act as a balm that allows us to remember, to heal and ultimately, to grow.<br>
-                <span style="font-size: 15px;">- Maestro Ricardo Muti</span>
-            </span>
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active nfp-homepage-image-carousel">
+                    <img src="/wp-content/themes/notesForPeace/assets/images/homepageImage.jpg" alt="Concert">
+                    <div class="carousel-caption nfp-homepage-carousel-caption">
+                        <span>We hope that our songs act as a balm that allows us to remember, to heal and ultimately, to grow.<br>
+                            <span style="font-size: 15px;">- Maestro Riccardo Muti</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="carousel-item nfp-homepage-image-carousel">
+                    <img src="/wp-content/themes/notesForPeace/assets/images/homepageImage-2.jpg" alt="Songwriting">
+                    <div class="carousel-caption nfp-homepage-carousel-caption">
+                        <span>We hope that our songs act as a balm that allows us to remember, to heal and ultimately, to grow.<br>
+                            <span style="font-size: 15px;">- Maestro Riccardo Muti</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="carousel-item nfp-homepage-image-carousel">
+                    <img src="/wp-content/themes/notesForPeace/assets/images/homepageImage-3.jpg" alt="Group">
+                    <div class="carousel-caption nfp-homepage-carousel-caption">
+                        <span>We hope that our songs act as a balm that allows us to remember, to heal and ultimately, to grow.<br>
+                            <span style="font-size: 15px;">- Maestro Riccardo Muti</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" role="button" href="#myCarousel" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" role="button" href="#myCarousel" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
 
 
