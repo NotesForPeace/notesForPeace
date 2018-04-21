@@ -85,17 +85,29 @@
             'post_status'    => 'publish'		        //Get only the posts that are meant to be public
         );
     
-        $args['form'] = array( 'auto_submit' => true );
-    
-        $args['form']['ajax'] = array( 'enabled'                => true,
-                                       'show_default_results'   => true,
-                                       'results_template'       => 'template-ajax-results.php', // This file must exist in your theme root
-                                       'button_text'            => 'Load More Results');
+        $args['form'] = array( 
+            'auto_submit'       => true,
+            'disable_wrappers'  => true,
+            'method'           => 'GET',
+            'name'              => 'tributeSearch',
+            'ajax'              => array( 
+                                    'enabled'                => true,
+                                    'show_default_results'   => true,
+                                    'results_template'       => 'template-ajax-results.php', // This file must exist in your theme root
+                                    'button_text'            => 'Load More Results'));
 
         $args['fields'][] = array( 
             'type'  => 'reset',
             'class' => 'button',
             'value' => 'Clear' );
+
+
+        $args['fields'][] = array( 
+            'type'      => 'search',
+            'label'     => 'Keyword',
+            'class'     => array('myclass', 'nfp-search-bar'),
+            'pre_html'  => '<div class="test">',
+            'post_html' => '</div>');
 
         $args['fields'][] = array( 
             'type'      => 'meta_key', 
