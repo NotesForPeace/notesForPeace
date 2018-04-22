@@ -140,29 +140,8 @@
 /*=================================================================================================
 # NfP Homepage
 ===================================================================================================*/
-.nfp-homepage-image  {
-    position: relative;
-    background-image: url(/wp-content/themes/notesForPeace/assets/images/homepageImage.jpg);
-    height: 50%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .nfp-homepage-image-carousel {
     height: 50%;
-}
-
-.nfp-homepage-image-quote {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #e3dacd;
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100; 
-    font-style: normal;
 }
 
 .nfp-homepage-carousel-caption {
