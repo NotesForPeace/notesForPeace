@@ -18,9 +18,9 @@
 			<?php while ( have_posts() ) : the_post(); ?>
 				
 				<div class="container pt-4">
-					<div class="row">
+					<div class="row justify-content-center">
 						<div class="col">
-							<h1><?php the_title(); ?></h1>   
+							<h1 class="text-center"><?php the_title(); ?></h1>   
 						</div>
 					</div>
 				</div>
@@ -31,13 +31,17 @@
         <?php $search = new WP_Advanced_Search('tributeSearch');?>
 
         <div class="container">
-            <div class="row">
-
-                <div id="facetedSearch" class="col-2">
+            <div class="row justify-content-center">
+            <div id="facetedSearch" class="col-9">
                     <?php $search->the_form(); ?>
                 </div>
+            </div>
 
-                <div class="col-10">
+            <div class="row">
+
+
+
+                <div class="col-12">
                     <!-- This is results will be loaded -->
                     <div id="wpas-results"></div> 
                 </div>

@@ -336,19 +336,20 @@ div.asl_r .results .item {
 /*---------------------------------------------------------
 # Search Bar
 ---------------------------------------------------------*/
-#nfp-search-bar {
+#nfp-search-bar, #search_query {
     border-radius: 0px;
     color: #e3dacd;
     border: none;
     background-color: #472727;
 }
 
-#nfp-search-bar::placeholder {
+#nfp-search-bar::placeholder, #search_query::placeholder {
     color: #e3dacd;
 }
 
-#nfp-search-bar:focus {
+#nfp-search-bar:focus, #search_query:focus {
     box-shadow: none;
+    outline: none;
 }
 
 /*---------------------------------------------------------
@@ -434,4 +435,57 @@ div.asl_r .results .item {
 .individual-information hr {
     width: 50%;
     margin-bottom: 30px;
+}
+
+
+/*---------------------------------------------------------
+# Alphabetical refiners
+---------------------------------------------------------*/
+
+.wpas-meta_individual_alpha_sort-checkboxes > div{
+    display: inline-block;
+}
+
+.wpas-meta_individual_alpha_sort-checkboxes .wpas-checkbox{
+    display: none;
+}
+
+.wpas-meta_individual_alpha_sort-checkboxes input[type=checkbox]:checked + label{
+    font-size: large;
+    font-weight: bold;
+}
+
+.wpas-meta_individual_alpha_sort-checkboxes label{
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+
+#search_query{
+    width: 100%;
+    padding: 5px;
+}
+
+.label-container > label{
+    display: none;
+}
+
+.wpas-reset{
+    position: absolute;
+    right: -40px;
+    top: 20px;
+    border-style: solid;
+    border: 2px;
+    border-color: #e3dacd;
+    background-color: #472727;
+    color: #e3dacd;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: -20px;
+
+}
+
+.wpas-reset:focus{
+    box-shadow: none;
+    outline: none;
+
 }
