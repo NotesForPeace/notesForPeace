@@ -67,7 +67,7 @@
 								$tributeSummary   = get_post_meta($tributeID, 'individual_tagline', true);
 								$tributeImageURL  = wp_get_attachment_image_src( get_post_thumbnail_id( $tributeID ), 'single-post-thumbnail' );
 								
-								echo '<div class="nfp-card-wrapper" individual_first_name="'.$tributeFirstName.'" individual_last_name="'.$tributeLastName.'">';
+								echo '<div class="nfp-card-wrapper" tribute_title="'.$tributeTitle.'" individual_full_name="'.$tributeFirstName.' '.$tributeLastName. '" individual_first_name="'.$tributeFirstName.'" individual_last_name="'.$tributeLastName.'">';
 									echo '<a href="'.$tributeURL.'">';
 										echo '<div class="card mb-4 nfp-tribute-card">';
 											echo '<img class="card-img-top nfp-tribute-card-image" src="'.$tributeImageURL[0].'">';
