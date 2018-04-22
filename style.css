@@ -489,3 +489,7 @@ div.asl_r .results .item {
     outline: none;
 
 }
+
+#wpas-load{
+    display: none;
+}
