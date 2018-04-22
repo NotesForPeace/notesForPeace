@@ -55,7 +55,7 @@
         </div>
 
         <!-- Tribute Content -->
-        <div class="contain py-3" style="margin-top: 10px; border-top: 4px solid #e3dacd;">
+        <div class="contain py-3 d-none d-md-block" style="margin-top: 10px; border-top: 4px solid #e3dacd;">
             <div class="row justify-content-center">
                 <div class="col-sm-8">
                     <!--Section Navigation -->
@@ -99,6 +99,22 @@
                 </div>
             </div>
         </div>
-
-        <?php get_footer(); ?>
+        <!--Mobile version-->
+        <div class="d-block d-md-none">
+            <div class="row">
+                <div class="nav-link">About <?php echo get_field('individual_first_name') ?></div>
+                <div class="about-individual-text">
+                    <p class="drop-cap"><?php echo get_field('about_individual') ?></p>
+                </div>
+            </div>
+            <div class="row">
+                <h2>Song</h2>
+                <p><?php echo get_field('song_lyrics') ?></p>
+            </div>
+            <div class="row">
+                <h2>Letter From Parents</h2>
+                <p><?php echo get_field('letters') ?></p>
+                <?php get_footer(); ?>
+            </div>
+</div>
         
