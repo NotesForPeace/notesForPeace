@@ -247,32 +247,19 @@ p {
 /*=================================================================================================
 # Contact Form
 ===================================================================================================*/
-#wpforms-212-field_1-container > label {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 100; 
-    color: #e3dacd;   
+#wpforms-submit-212 {
+	background-color: #220706;
+	color: #ffffff;
 }
 
-#wpforms-212-field_1-container > label > span {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 100; 
-    color: #e3dacd;   
-}
 
-#wpforms-212-field_2-container > label {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 100; 
-    color: #e3dacd;   
-}
 
-#wpforms-212-field_2-container > label > span {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 100; 
-    color: #e3dacd;   
+#wpforms-212 {
+	font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 100;
+    letter-spacing: 0.05em;
+    color: #e3dacd; 
 }
 
 
