@@ -37,8 +37,9 @@
 
             <!-- Birth and Death Date -->
             <div class="row justify-content-center">
-                <div class="col-sm-6 justify-content-center">
-                    <p><?php echo date("F j, Y", strtotime(get_field('individual_birth_date'))); ?> - <?php echo date("F j, Y", strtotime(get_field('individual_death_date'))); ?>
+                <div class="col-sm-7 justify-content-center">
+                    <p>
+                        <?php echo date("F j, Y", strtotime(get_field('individual_birth_date'))); ?> - <?php echo date("F j, Y", strtotime(get_field('individual_death_date'))); ?>
                         <hr>
                     </p>
                 </div>
@@ -68,12 +69,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="pills-song-tab" data-toggle="pill" href="#pills-song" role="tab" aria-controls="pills-song" aria-selected="false">Song
+                        <a class="nav-link" id="pills-song-tab" data-toggle="pill" href="#pills-song" role="tab" aria-controls="pills-song" aria-selected="false">
+                            Song
                             <hr>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="pills-letter-tab" data-toggle="pill" href="#pills-letter" role="tab" aria-controls="pills-letter" aria-selected="false">Letter From Parents
+                        <a class="nav-link" id="pills-letter-tab" data-toggle="pill" href="#pills-letter" role="tab" aria-controls="pills-letter" aria-selected="false">
+                            Letter
                             <hr>
                         </a>
                     </li>
@@ -96,6 +99,7 @@
                     <p><?php echo get_field('letters') ?></p>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
