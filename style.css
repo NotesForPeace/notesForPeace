@@ -421,7 +421,6 @@ div.asl_r .results .item {
 .nav-item{
     height: 40px;
 }
-
 .nav-item>.active {
     background: none !important;
 }
@@ -436,8 +435,12 @@ div.asl_r .results .item {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
+/*d-md-none means it's for mobile*/
+.d-md-none .nav-link{
+    margin-top: 16px;
+}
 /*instead of putting it within the link, could put it after and do active + .link-border-bottom*/
-.active>hr, .individual-information hr {
+.active>hr, .individual-information hr, .section-divider {
     width: 80%;
     height: 2px;
     margin: 0px auto;
@@ -450,4 +453,7 @@ div.asl_r .results .item {
 }
 #pills-tab {
     margin: 0 !important;
+}
+.lyrics {
+    text-align: center !important;
 }
