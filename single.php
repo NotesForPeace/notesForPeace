@@ -92,6 +92,13 @@
                 </div>
                 <!--Song section-->
                 <div class="tab-pane fade justify-content-center lyrics" id="pills-song" role="tabpanel" aria-labelledby="pills-song-tab">
+                    <!-- Get track URl and play song -->
+                    <?php global $post; ?>
+                    <?php $firstname = get_post_meta($post->ID, 'First Name', true); ?>
+                    <?php $lastname = get_post_meta($post->ID, 'Last Name', true); ?>
+                    <?php $song_url='http://enefp.local/wp-content/uploads/ap-hap-file-dir/' . $firstname . '_' . $lastname . '.mp3'; ?>
+                    <p><?php echo do_shortcode("[ap_hap_addtrack id='1' label='Play the tribute track' track_type='local'  mp3='".$song_url."']"); ?></p>
+                    <?php echo do_shortcode('[ap_hap_play id="1" label="actually play"]'); ?>
                     <p><?php echo get_field('song_lyrics') ?></p>
                 </div>
                 <!--Letter section-->
