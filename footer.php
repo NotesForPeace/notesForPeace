@@ -61,6 +61,12 @@
                 <div class="row justify-content-center">
                         <span class="nfp-footer-message">Thank you for visiting.</span>
                 </div>
+                   
+                <!-- Player -->
+                <div class="row justify-content-center">
+                    <!-- create player -->
+                    <?php echo do_shortcode('[ap_hap id="1" preset="dark" use_playlist_selector="1" active_playlist="-1" active_item="0" default_volume="0.5" auto_play="0" auto_load="0" random_play="0" looping_on="1" use_playlist="1" use_thumbnails_in_playlist="0" auto_open_playlist="1" use_numbers_in_playlist="1" sortable_playlist_items="0" use_playlist_scroll="1" auto_open_player_in_popup="0" auto_update_window_data="0" sound_id="tPlayer"]'); ?>
+                </div>
 
             </div>
         </div>
