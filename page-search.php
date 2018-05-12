@@ -10,7 +10,16 @@
  * @version 1.0
  */
 ?>
+<?php
+    //---------------------------------------------------------------------------------------------
+    //Load the Bootstrap files, Google Fonts, and stylesheet for the NFP Theme
+    //---------------------------------------------------------------------------------------------
+    function enqueue_search_scripts() {
+        wp_enqueue_script('page-tributes', get_stylesheet_directory_uri() . '/page-tributes.js', array( 'jquery' ) );
+    }
+    add_action('wp_enqueue_scripts', 'enqueue_search_scripts');
 
+?>
         <?php get_header(); ?>
         
         <!-- Search Page Header -->

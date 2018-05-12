@@ -470,17 +470,14 @@ div.asl_r .results .item {
 
 .wpas-reset{
     position: absolute;
-    right: -40px;
-    top: 20px;
+    right: 0;
+    height: 34px;
+    margin-right: 5vw;
     border-style: solid;
     border: 2px;
     border-color: #e3dacd;
     background-color: #472727;
     color: #e3dacd;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-top: -20px;
-
 }
 
 .wpas-reset:focus{
