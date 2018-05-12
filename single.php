@@ -56,15 +56,15 @@
 </div>
 
 <!-- Tribute Content -->
-<div class="contain py-3 d-none d-md-block" style="margin-top: 10px; border-top: 4px solid #e3dacd;">
+<div class="d-none d-md-block" style="margin-top: 10px; border-top: 4px solid #e3dacd;"></div>
+<div class="contain py-3 d-block">
     <div class="row justify-content-center">
-        <div class="col-sm-8">
+        <div class="col-10 col-md-8">
             <!--Section Navigation -->
-            
             <div class="row individual-section-titles justify-content-center">
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="pills-about-tab" data-toggle="pill" href="#pills-about" role="tab" aria-controls="pills-about" aria-selected="true">About <?php echo get_field('individual_first_name') ?>
+                        <a class="nav-link active" id="pills-about-tab" data-toggle="pill" href="#pills-about" role="tab" aria-controls="pills-about" aria-selected="true">About
                             <hr>
                         </a>
                     </li>
@@ -74,56 +74,25 @@
                             <hr>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="pills-letter-tab" data-toggle="pill" href="#pills-letter" role="tab" aria-controls="pills-letter" aria-selected="false">
-                            Letter
-                            <hr>
-                        </a>
-                    </li>
                 </ul>
             </div>
             <div class="tab-content" id="pills-tabContent">
                 <!--About section-->
-                
                 <div class="tab-pane fade show active media" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
-                    <div class="media-body about-individual-text">
-                        <p class="drop-cap"><?php echo get_field('about_individual') ?></p>
+                    <div class="media-body about-individual" onload="rearrange_about_individual()">
+                        <div class="row">
+                            <div class="col-8" id="about-text"></div>
+                            <div class="col-4" id="about-images"></div>
+                            <?php echo get_field('about_individual') ?>
+                        </row>
                     </div>
                 </div>
                 <!--Song section-->
                 <div class="tab-pane fade justify-content-center lyrics" id="pills-song" role="tabpanel" aria-labelledby="pills-song-tab">
                     <p><?php echo get_field('song_lyrics') ?></p>
                 </div>
-                <!--Letter section-->
-                <div class="tab-pane fade" id="pills-letter" role="tabpanel" aria-labelledby="pills-letter-tab">
-                    <p><?php echo get_field('letters') ?></p>
-                </div>
             </div>
-
         </div>
-    </div>
-</div>
-<!--Mobile version-->
-<div class="contain d-block d-md-none justify-content-center">
-    <div class="row justify-content-center">
-        <div class="nav-link col-11">About <?php echo get_field('individual_first_name') ?></div>
-        <div class="about-individual-text col-11">
-            <?php echo get_field('about_individual') ?>
-            <hr class="section-divider">
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="nav-link col-11">Song</div>
-        <div class="col-11 lyrics">
-            <?php echo get_field('song_lyrics') ?>
-            <hr class="section-divider">
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="nav-link col-11">Letter From Parents</div>
-        <div class="col-11">
-            <?php echo get_field('letters') ?>
-        </div>  
     </div>
 </div>
 <?php get_footer(); ?>

@@ -8,6 +8,7 @@
         wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css?family=Great+Vibes|Libre+Baskerville:400,400i|Roboto:300');
         wp_enqueue_style('nfp-style', get_stylesheet_uri());
         wp_enqueue_script('page-tributes', get_stylesheet_directory_uri() . '/page-tributes.js', array( 'jquery' ) );
+        wp_enqueue_script('individual', get_stylesheet_directory_uri() . '/individual.js', array( 'jquery' ) );       
     }
     add_action('wp_enqueue_scripts', 'enqueue_nfp_scripts');
 
@@ -146,4 +147,15 @@
         register_wpas_form('tributeSearch', $args);
     }
     add_action('init', 'facetedSearch');
+    //---------------------------------------------------------------------------------------------
+    // This function takes the text and images in the "About" section of each individual tribute
+    // page and moves them side-by-side (on a computer, not mobile)
+    //---------------------------------------------------------------------------------------------
+    function rearrange_about() {
+        //get all about-individual>p classes
+        //move them into about-text
+        //get all about-individual>img classes
+        //move them into about-images
+    }
+    add_action( 'init', 'rearrange_about' );
 ?>
