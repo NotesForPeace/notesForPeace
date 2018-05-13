@@ -79,12 +79,12 @@
             <div class="tab-content" id="pills-tabContent">
                 <!--About section-->
                 <div class="tab-pane fade show active media" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
-                    <div class="media-body about-individual" onload="rearrange_about_individual()">
+                    <div class="media-body about-individual">
                         <div class="row">
                             <div class="col-8" id="about-text"></div>
                             <div class="col-4" id="about-images"></div>
                             <?php echo get_field('about_individual') ?>
-                        </row>
+                        </div>
                     </div>
                 </div>
                 <!--Song section-->
