@@ -57,7 +57,7 @@
 
 <!-- Tribute Content -->
 <div class="d-none d-md-block" style="margin-top: 10px; border-top: 4px solid #e3dacd;"></div>
-<div class="contain py-3 d-block">
+<div class="contain py-3">
     <div class="row justify-content-center">
         <div class="col-10 col-md-8">
             <!--Section Navigation -->
