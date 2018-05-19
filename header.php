@@ -15,6 +15,15 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119552489-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-119552489-1');
+        </script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
         <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -57,11 +66,5 @@
                     'walker'            => new WP_Bootstrap_Navwalker()
                 ) );
             ?>
-
-            <!--
-                NOTE TO SELF: The "Navigation Label" of a Menu Item in Wordpress will accept HTML and CSS.
-                TODO: If possible remove this hack. Don't insert the svg into the navigation label.  
-                <svg viewBox="0 0 20 20" width="20" height="20" style="margin-top:5px;color:#e3dacd;fill: #e3dacd;"><path d="M17.5,2.4C15.9,0.9,13.7,0,11.4,0S7,0.9,5.4,2.4S2.9,6.1,2.9,8.2c0,1.6,0.5,3.1,1.3,4.4l-3.6,3.7c-0.8,0.9-0.8,2.3,0.1,3.1 c0.4,0.4,1,0.6,1.5,0.6c0.6,0,1.2-0.2,1.7-0.7l3.6-3.7c1.2,0.6,2.5,0.9,3.9,0.9c2.3,0,4.4-0.9,6.1-2.4S20,10.4,20,8.2 S19.1,4,17.5,2.4z M15.6,12.3c-1.1,1.1-2.6,1.7-4.1,1.7s-3-0.6-4.1-1.7c-2.3-2.2-2.3-5.8,0-8c1.1-1.1,2.6-1.7,4.1-1.7s3,0.6,4.1,1.7 C17.9,6.5,17.9,10,15.6,12.3z"/></svg>
-            -->
 
         </nav>

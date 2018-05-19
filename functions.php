@@ -147,6 +147,8 @@
         register_wpas_form('tributeSearch', $args);
     }
     add_action('init', 'facetedSearch');
+
+    
     //---------------------------------------------------------------------------------------------
     // This function takes the text and images in the "About" section of each individual tribute
     // page and moves them side-by-side (on a computer, not mobile)

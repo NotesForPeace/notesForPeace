@@ -60,11 +60,13 @@
 <div class="contain py-3">
     <div class="row justify-content-center">
         <div class="col-10 col-md-8">
-            <!--Section Navigation -->
+        
+            <!-- Section Navigation -->
             <div class="row individual-section-titles justify-content-center">
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="pills-about-tab" data-toggle="pill" href="#pills-about" role="tab" aria-controls="pills-about" aria-selected="true">About
+                        <a class="nav-link active" id="pills-about-tab" data-toggle="pill" href="#pills-about" role="tab" aria-controls="pills-about" aria-selected="true">
+                            About
                             <hr>
                         </a>
                     </li>
@@ -76,27 +78,32 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- Section Content -->
             <div class="tab-content" id="pills-tabContent">
-                <!--About section-->
+
+                <!-- About -->
                 <div class="tab-pane fade show active media" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
                     <div class="media-body about-individual">
                         <div class="row">
                             <div class="col-8" id="about-text"></div>
                             <div class="col-4" id="about-images"></div>
-                            <?php echo get_field('about_individual') ?>
+                            <?php echo get_field('individual_about') ?>
                         </div>
                     </div>
                 </div>
-                <!--Song section-->
+            
+                <!-- Song -->
                 <div class="tab-pane fade justify-content-center lyrics" id="pills-song" role="tabpanel" aria-labelledby="pills-song-tab">
-                    <!-- Get track URl and play song -->
+                    
+                    <!-- Get track URL and play song -->
                     <?php global $post; ?>
                     <?php $firstname = get_post_meta($post->ID, 'First Name', true); ?>
                     <?php $lastname = get_post_meta($post->ID, 'Last Name', true); ?>
                     <?php $song_url='http://enefp.local/wp-content/uploads/ap-hap-file-dir/' . $firstname . '_' . $lastname . '.mp3'; ?>
                     <p><?php echo do_shortcode("[ap_hap_addtrack id='1' label='Play the tribute track' track_type='local'  mp3='".$song_url."']"); ?></p>
                     <?php echo do_shortcode('[ap_hap_play id="1" label="actually play"]'); ?>
-                    <p><?php echo get_field('song_lyrics') ?></p>
+                    <p><?php echo get_field('individual_song_lyrics') ?></p>
                 </div>
             </div>
         </div>
