@@ -397,6 +397,11 @@ div.asl_r .results .item {
     padding-bottom: 0;
     margin: 0;
 }
+
+.individual-section-titles {
+    margin-bottom: 10px;
+}
+
 .nav-item{
     height: 40px;
 }
@@ -414,10 +419,7 @@ div.asl_r .results .item {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
-/*d-md-none means it's for mobile*/
-.d-md-none .nav-link{
-    margin-top: 16px;
-}
+
 /*instead of putting it within the link, could put it after and do active + .link-border-bottom*/
 .active>hr, .individual-information hr, .section-divider {
     width: 80%;
@@ -435,6 +437,9 @@ div.asl_r .results .item {
 }
 .lyrics {
     text-align: center !important;
+}
+.about-individual img{
+    margin-top:10px;
 }
 
 /*---------------------------------------------------------
