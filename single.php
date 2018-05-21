@@ -19,10 +19,7 @@
 
         <!-- Individual's Image -->
         <div class="col-sm-6">
-            <?php if (has_post_thumbnail( $post->ID ) ): ?>
-                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-                <img src="<?php echo $image[0]; ?>" class="img-fluid">
-            <?php endif; ?>
+            <img src="<?php echo get_field('individual_featured_photo') ?>" class="img-fluid">
         </div>
 
         <!-- Individual's Information -->
