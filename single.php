@@ -31,7 +31,29 @@
             <!-- Name -->
             <div class="row justify-content-center">
                 <div class="col-sm-12 justify-content-center">
-                    <h1><?php echo get_field('individual_first_name') ?> <?php echo get_field('individual_last_name') ?></h1>
+
+                    <!-- Create display name -->
+                    <?php 
+                        //Get first name
+                        $individualDisplayName = get_field('individual_first_name');
+                        
+                        //Add nickname, if applicable
+                        if (get_field('individual_nickname') == '-' ){
+                        } else {
+                            $individualDisplayName = $individualDisplayName . ' "' . get_field('individual_nickname') . '"';
+                        }
+
+                        //Add last name
+                        $individualDisplayName = $individualDisplayName . ' ' . get_field('individual_last_name');
+                        
+                        //Add suffix, if applicable
+                        if (get_field('individual_name_suffix') === '-' ){
+                        } else {
+                            $individualDisplayName = $individualDisplayName . ', ' . get_field('individual_name_suffix');
+                        }
+                    ?>
+
+                    <h1><?php echo $individualDisplayName ?></h1>
                 </div>
             </div>
 
@@ -87,7 +109,7 @@
                     <div class="media-body about-individual">
                         <div class="row">
                             <div class="col-12 col-sm-8" id="about-text">
-                                <?php echo get_field('about_individual') ?>
+                                <?php echo get_field('individual_about') ?>
                             </div>
                             <div class="col-sm-4" id="about-images"></div>
                         </div>
