@@ -15,7 +15,7 @@
  */
 
  ?>
-
+ 
         <?php get_header(); ?>
 
         <!-- Homepage Image and Quote -->
@@ -30,8 +30,7 @@
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
-                <div class="carousel-item active nfp-homepage-image-carousel">
-                    <img src="/wp-content/themes/notesForPeace/assets/images/homepageImage.jpg" class="img-fluid" alt="Concert">
+                <div class="carousel-item active img1">
                     <div class="carousel-caption nfp-homepage-carousel-caption">
                         <span>We hope that our songs act as a balm that allows us to remember, to heal and ultimately, to grow.<br>
                             <span style="font-size: 15px;">- Maestro Riccardo Muti</span>
@@ -39,8 +38,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-item nfp-homepage-image-carousel">
-                    <img src="/wp-content/themes/notesForPeace/assets/images/homepageImage-2.jpg" class="img-fluid" alt="Songwriting">
+                <div class="carousel-item img2">
                     <div class="carousel-caption nfp-homepage-carousel-caption">
                         <span>We hope that our songs act as a balm that allows us to remember, to heal and ultimately, to grow.<br>
                             <span style="font-size: 15px;">- Maestro Riccardo Muti</span>
@@ -48,8 +46,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-item nfp-homepage-image-carousel">
-                    <img src="/wp-content/themes/notesForPeace/assets/images/homepageImage-3.jpg" class="img-fluid" alt="Group">
+                <div class="carousel-item img3">
                     <div class="carousel-caption nfp-homepage-carousel-caption">
                         <span>We hope that our songs act as a balm that allows us to remember, to heal and ultimately, to grow.<br>
                             <span style="font-size: 15px;">- Maestro Riccardo Muti</span>
