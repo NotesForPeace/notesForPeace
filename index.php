@@ -15,9 +15,8 @@
  */
 
  ?>
- 
-        <?php get_header(); ?>
-
+<?php get_header(); ?>
+    <div id="ajaxcontent">
         <!-- Homepage Carousel -->
         <div class="container-fluid">
             <?php masterslider("homepage"); ?>
@@ -30,6 +29,7 @@
                     <h1>our mission</h1>
                     <p>We are coping with a terrible epidemic of gun violence. While a parent may never move past the loss of their child, we join together in community to create a more peaceful Chicago. We write songs to remember our loved ones. We write songs to share our stories since music communicates directly to the soul.</p>
                 </div>
+            </div>
         </div>
-
-        <?php get_footer(); ?>
+    </div>
+<?php get_footer(); ?>
