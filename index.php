@@ -18,54 +18,10 @@
  
         <?php get_header(); ?>
 
-        <!-- Homepage Image and Quote -->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                <div class="carousel-item active img1">
-                    <div class="carousel-caption nfp-homepage-carousel-caption">
-                        <span>We hope that our songs act as a balm that allows us to remember, to heal and ultimately, to grow.<br>
-                            <span style="font-size: 15px;">- Maestro Riccardo Muti</span>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="carousel-item img2">
-                    <div class="carousel-caption nfp-homepage-carousel-caption">
-                        <span>We hope that our songs act as a balm that allows us to remember, to heal and ultimately, to grow.<br>
-                            <span style="font-size: 15px;">- Maestro Riccardo Muti</span>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="carousel-item img3">
-                    <div class="carousel-caption nfp-homepage-carousel-caption">
-                        <span>We hope that our songs act as a balm that allows us to remember, to heal and ultimately, to grow.<br>
-                            <span style="font-size: 15px;">- Maestro Riccardo Muti</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="carousel-control-prev" role="button" href="#myCarousel" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" role="button" href="#myCarousel" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+        <!-- Homepage Carousel -->
+        <div class="container-fluid">
+            <?php masterslider("homepage"); ?>
         </div>
-
 
         <!-- Mission Statement -->
         <div class="container-fluid py-3">
