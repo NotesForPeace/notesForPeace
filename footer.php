@@ -13,7 +13,7 @@
 
 ?>
        <!-- Footer -->
-       <div class="row nfp-footer py-3">
+       <div id="notajaxcontent" class="row nfp-footer py-3">
             <div class="container">
 
                 <!-- Contact and Socila Media Links -->

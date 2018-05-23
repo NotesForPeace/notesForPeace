@@ -11,12 +11,11 @@
  */
 ?>
 
-        <?php get_header(); ?>
-
-
+<?php get_header(); ?>
+<div id="ajaxcontent">
         <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post(); ?>
-                
+
                 <div class="container-fluid p-5">
                     <div class="row">
                         <div class="col-md-6 col-lg-12">
@@ -30,9 +29,9 @@
                     </div>
                 </div>
 
-                
+
             <?php endwhile; ?>
         <?php endif; ?>
 
-
-        <?php get_footer(); ?>
+</div>
+<?php get_footer(); ?>
