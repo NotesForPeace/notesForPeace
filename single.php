@@ -12,6 +12,12 @@
 ?>
 
 <?php get_header(); ?>
+<!-- Get track URl -->
+<?php global $post; ?>
+<?php $firstname = get_post_meta($post->ID, 'First Name', true); ?>
+<?php $lastname = get_post_meta($post->ID, 'Last Name', true); ?>
+<?php $song_url='http://notesforpeace.org/wp-content/uploads/ap-hap-file-dir/' . $firstname . '_' . $lastname . '.mp3'; ?>
+<p class="song-button-container"><?php echo do_shortcode("[ap_hap_addtrack id='1' label='song' track_type='local'  mp3='".$song_url."']"); ?></p>
 
 <!-- Tribute Header -->
 <div class="container-fluid">
@@ -83,6 +89,7 @@
             <?php echo get_field('individual_about') ?>
         </div>
         <div class="col-12 col-md-8">
+            <p><?php echo do_shortcode('[ap_hap_play id="1" label="Play Track"]'); ?></p>
             <p><?php echo get_field('individual_song_lyrics') ?></p>
         </div>
     </div>
