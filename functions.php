@@ -7,7 +7,7 @@
         wp_enqueue_script('custom_script');
         wp_enqueue_script('bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js', array('jquery'));
         wp_enqueue_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
-        wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css?family=Great+Vibes|Libre+Baskerville:400,400i|Roboto:300,500');
+        wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css?family=Pinyon+Script|Libre+Baskerville:400,400i|Roboto:300,500');
         wp_enqueue_style('nfp-style', get_stylesheet_uri());
         wp_enqueue_script('page-tributes', get_stylesheet_directory_uri() . '/page-tributes.js', array( 'jquery' ) );
     }
@@ -82,8 +82,8 @@
             'posts_per_page' => -1, 			        //-1 to return all posts
             'orderby'        => 'meta_value', 	        //Meta values and custom fields are the same thing
             'order'          => 'ASC', 			        //Ascending, use DESC for descending
-            'meta_key'       => 'individual_last_name', //TODO: We should move all the custom field key names into some centralized location
-            'post_type'      => 'tribute',              //TODO: We need to finalize our data model
+            'meta_key'       => 'individual_last_name', 
+            'post_type'      => 'tribute',              
             'post_status'    => 'publish'		        //Get only the posts that are meant to be public
         );
     
@@ -101,12 +101,13 @@
         $args['fields'][] = array( 
             'type'  => 'reset',
             'class' => 'button',
-            'value' => 'Clear' );
+            'value' => 'CLEAR' );
 
 
         $args['fields'][] = array( 
             'type'      => 'search',
             'label'     => 'Keyword',
+            'placeholder' => 'SEARCH BY NAME',
             'class'     => array('myclass', 'nfp-search-bar'),
             'pre_html'  => '<div class="test">',
             'post_html' => '</div>');

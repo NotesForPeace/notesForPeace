@@ -14,13 +14,27 @@
                         <?php if ( have_posts() ) : ?>
                             <?php while ( have_posts() ) : the_post(); ?>
                                 <?php $post_type = get_post_type_object($post->post_type); ?>
-                                <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
+                                
+                                <!-- Create Caption -->
+                                <?php 
+                                    //Get first name
+                                    $thumbnailCaption = get_field('individual_first_name');
+
+                                    //Add nickname, if applicable
+                                    if (get_field('individual_nickname') === '-' ){
+                                    } else {
+                                        $thumbnailCaption = $thumbnailCaption . ' "' . get_field('individual_nickname') . '"';
+                                    }
+
+                                    //Add last name
+                                    $thumbnailCaption = $thumbnailCaption . ' ' . get_field('individual_last_name');
+                                ?>
 
                                 <div class="nfp-card-wrapper" first_name="'.$tributeFirstName.'" last_name="'.$tributeLastName.'">
                                     <a href="<?php the_permalink(); ?>">
                                         <div class="card mb-4 nfp-tribute-card">
-                                            <img class="card-img-top nfp-tribute-card-image" src="<?php echo $url ?>">
-                                            <p><?php echo get_field('individual_last_name') ?></p>
+                                            <img class="card-img-top nfp-tribute-card-image" src="<?php echo get_field('loved_one_1_photo') ?>">
+                                            <p><?php echo $thumbnailCaption ?></p>
                                         </div>
                                     </a>
                                 </div>

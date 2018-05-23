@@ -15,7 +15,7 @@
 
 		<div id="ajaxcontent">
 
-			<!-- Tribute Page Header -->
+			<!-- Tributes Page Header -->
 			<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -30,9 +30,8 @@
 				<?php endwhile; ?>
 			<?php endif; ?>
 
+			<!-- Tributes Search and Results -->	
 			<?php $search = new WP_Advanced_Search('tributeSearch');?>
-
-			<!-- Tribute Search and Results -->
 			<div class="container">
 
 				<!-- Keyword and Faceted Search -->

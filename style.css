@@ -28,6 +28,10 @@
     4c. Message
     4d. Song Player
 5. Tributes
+    5a. Search bar
+    5b. A-Z Faceted Search
+    5c. Tribute Cards
+    5d. Clear Button and Loading Indicator
 6. Individual Tribute
 7. Contact
 ***************************************************************************************************/
@@ -87,6 +91,7 @@ hr {
 }     
 
 
+
 /*#################################################################################################
 # 2. Header
 #################################################################################################*/
@@ -103,7 +108,7 @@ hr {
 # 2b. Navbar Logo
 -------------------------------------------------------------------------------------------------*/
 .nfp-logo {
-    font-family: 'Great Vibes', Helvetica, sans-serif;
+    font-family: 'Pinyon Script', cursive;
     font-size: 60px;
     color: #e4dad0;
 }
@@ -111,7 +116,7 @@ hr {
 .nfp-logo2 {
     /* Using the Great Vibes font, the 'for' in "Notes for Peace" is massive. 
     The nfp-logo2 class is used to tone it down.*/
-    font-family: 'Great Vibes', Helvetica, sans-serif;
+    font-family: 'Pinyon Script', cursive;
     font-size: 55px;
     color: #e4dad0;
 }
@@ -122,7 +127,7 @@ hr {
 .nfp-navbar .navbar-nav > li {
     /* Add top margin to Bottom align the Links to the Logo. Adjustments to the Logo sizing 
     will requires changes to this value */
-    margin-top: 18px; 
+    margin-top: 30px; 
 }
 
 .nfp-navbar .navbar-nav > li > a {
@@ -201,32 +206,7 @@ hr {
 /*#################################################################################################
 # 3. Homepage
 #################################################################################################*/
-.carousel-inner .carousel-item {
-    width: 100%;
-    height: 400px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 
-.img1 {
-    background: url(/wp-content/themes/notesForPeace/assets/images/homepageImage.jpg) no-repeat center center fixed; 
-}
-.img2 {
-    background: url(/wp-content/themes/notesForPeace/assets/images/homepageImage-2.jpg) no-repeat center center fixed; 
-}
-.img3 {
-    background: url(/wp-content/themes/notesForPeace/assets/images/homepageImage-3.jpg) no-repeat center center fixed; 
-}
-
-.nfp-homepage-carousel-caption {
-    color: #e3dacd;
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100; 
-    font-style: normal;
-}
 
 
 
@@ -274,33 +254,35 @@ hr {
 
 
 
-
-
 /*#################################################################################################
 # 5. Tributes
 #################################################################################################*/
 
-/*---------------------------------------------------------
-# Faceted Search
----------------------------------------------------------*/
-label {
-    display: inline-block;
-    margin-bottom: 0;
-    color: #e3dacd;
-}
-
-/*---------------------------------------------------------
-# Search Bar
----------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------
+# 5a. Search Bar
+-------------------------------------------------------------------------------------------------*/
 #nfp-search-bar, #search_query {
-    border-radius: 0px;
-    color: #e3dacd;
+    /* Style of search argument */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: #000000; 
+
+    /* Style of search bar */
+    width: 100%;
+    padding: 5px;
+    padding-left: 17px;
     border: none;
-    background-color: #472727;
+    background-color: #e8dcd1;
 }
 
 #nfp-search-bar::placeholder, #search_query::placeholder {
-    color: #e3dacd;
+    color: #ba8179;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
 }
 
 #nfp-search-bar:focus, #search_query:focus {
@@ -308,9 +290,45 @@ label {
     outline: none;
 }
 
-/*---------------------------------------------------------
-# Cards in Grid
----------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------
+# 5b. A-Z Faceted Search
+-------------------------------------------------------------------------------------------------*/
+label {
+    margin-bottom: 0;
+    padding-right: 4px;
+    color: #cbc0b6;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.wpas-meta_individual_alpha_sort-checkboxes > div{
+    display: inline-block;
+}
+
+.wpas-meta_individual_alpha_sort-checkboxes .wpas-checkbox{
+    display: none;
+}
+
+.wpas-meta_individual_alpha_sort-checkboxes input[type=checkbox]:checked + label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.wpas-meta_individual_alpha_sort-checkboxes label{
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+
+.label-container > label{
+    display: none;
+}
+
+/*-------------------------------------------------------------------------------------------------
+# 5c. Tribute Cards
+-------------------------------------------------------------------------------------------------*/
 .nfp-tribute-card-img {
     border-radius: 0px;
 }
@@ -332,42 +350,14 @@ label {
     text-decoration: none;
 }
 
-/*---------------------------------------------------------
-# Alphabetical refiners
----------------------------------------------------------*/
-
-.wpas-meta_individual_alpha_sort-checkboxes > div{
-    display: inline-block;
-}
-
-.wpas-meta_individual_alpha_sort-checkboxes .wpas-checkbox{
-    display: none;
-}
-
-.wpas-meta_individual_alpha_sort-checkboxes input[type=checkbox]:checked + label{
-    font-size: large;
-    font-weight: bold;
-}
-
-.wpas-meta_individual_alpha_sort-checkboxes label{
-    margin-left: 1vw;
-    margin-top: 1vh;
-}
-
-#search_query{
-    width: 100%;
-    padding: 5px;
-}
-
-.label-container > label{
-    display: none;
-}
-
+/*-------------------------------------------------------------------------------------------------
+# 5d. Clear Button and Loading Indicator
+-------------------------------------------------------------------------------------------------*/
 .wpas-reset{
     position: absolute;
     right: 0;
     height: 34px;
-    margin-right: 5vw;
+    margin-right: 1vw;
     border-style: solid;
     border: 2px;
     border-color: #e3dacd;
@@ -384,6 +374,7 @@ label {
 #wpas-load{
     display: none;
 }
+
 
 
 /*#################################################################################################
