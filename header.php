@@ -36,7 +36,7 @@
     <body <?php body_class(); ?> >
 
         <!-- NfP Navbar -->
-        <nav class="navbar navbar-expand-sm fixed-top nfp-navbar py-0">
+        <nav id="notajaxcontent" class="navbar navbar-expand-sm fixed-top nfp-navbar py-0">
 
             <!-- NfP Logo -->
             <a class="navbar-brand mr-auto" href="<?php echo get_site_url(); ?>">
