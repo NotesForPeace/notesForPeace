@@ -20,7 +20,7 @@
                                     <a href="<?php the_permalink(); ?>">
                                         <div class="card mb-4 nfp-tribute-card">
                                             <img class="card-img-top nfp-tribute-card-image" src="<?php echo $url ?>">
-                                            <p><?php the_title(); ?></p>
+                                            <p><?php echo get_field('individual_last_name') ?></p>
                                         </div>
                                     </a>
                                 </div>

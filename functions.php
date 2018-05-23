@@ -95,7 +95,7 @@
             'ajax'              => array( 
                                     'enabled'                => true,
                                     'show_default_results'   => true,
-                                    'results_template'       => 'template-ajax-results.php', // This file must exist in your theme root
+                                    'results_template'       => 'tributes-ajax-results.php', // This file must exist in your theme root
                                     'button_text'            => 'Load More Results'));
 
         $args['fields'][] = array( 
