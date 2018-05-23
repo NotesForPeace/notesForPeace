@@ -3,6 +3,8 @@
     //Load the Bootstrap files, Google Fonts, and stylesheet for the NFP Theme
     //---------------------------------------------------------------------------------------------
     function enqueue_nfp_scripts() {
+        wp_register_script('custom_script', get_stylesheet_directory_uri() . '/loadsong.js', array( 'jquery' ) );
+        wp_enqueue_script('custom_script');
         wp_enqueue_script('bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js', array('jquery'));
         wp_enqueue_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
         wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css?family=Great+Vibes|Libre+Baskerville:400,400i|Roboto:300,500');
