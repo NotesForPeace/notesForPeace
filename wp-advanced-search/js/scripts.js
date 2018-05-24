@@ -19,11 +19,14 @@ jQuery(document).ready(function($) {
     __WPAS.HASH = $(__WPAS.FORM).data('ajax-url-hash');
     var CURRENT_PAGE = 1;
 
+    // This is an RPK (tm) edit
+    var SEARCH_CONTAINER_HEIGHT = 0;
+
     /**
      *  Event listeners
      */
 
-    $('form.wpas-autosubmit :input').change(function() {
+    $('form.wpas-autosubmit :input').keyup(function() {
         $(this).parents('form').submit();
     });
 
@@ -291,6 +294,11 @@ jQuery(document).ready(function($) {
     // AJAX Event Listeners
 
     $(__WPAS.FORM).submit(function(e) {
+        var container_height = jQuery('.search-pane-nfp').height();
+        if (SEARCH_CONTAINER_HEIGHT < container_height){
+            jQuery('.search-pane-nfp').css('min-height',container_height+'px');
+        }
+        
         e.preventDefault();
         if (formLocked()) return;
         lockForm();
