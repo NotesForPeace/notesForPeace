@@ -24,7 +24,7 @@
 
             <!-- Tribute Header -->
             <div class="container-fluid nfp-tribute-header">
-                <div class="row vertical-align">
+                <div class="row align-items-center">
 
                     <!-- Individual's Image -->
                     <div class="col-sm-6">
@@ -92,12 +92,13 @@
             <!-- Divider -->
             <div class="d-none d-md-block" style="margin-top: 10px; border-top: 4px solid #e3dacd;"></div>
 
-            
+            <!-- Song Title and Lyrics -->
             <div class="container py-3">
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-md-7 col-sm-10 col-xs-12" align="center">
+                        <span class="nfp-tribute-song-title"><?php echo get_field('individual_song_title') ?></span>
                         <p><?php echo do_shortcode('[ap_hap_play id="1" label="Play Track"]'); ?></p>
-                        <p><?php echo get_field('individual_song_lyrics') ?></p>
+                        <span class="nfp-tribute-song-lyrics"><?php echo get_field('individual_song_lyrics') ?></span>
                     </div>
                 </div>
             </div>
