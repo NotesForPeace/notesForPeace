@@ -15,12 +15,11 @@
 
         <div id="ajaxcontent nfp-tribute-header">
 
-            <!-- Get track URl -->
-            <?php global $post; ?>
-            <?php $firstname = get_post_meta($post->ID, 'First Name', true); ?>
-            <?php $lastname = get_post_meta($post->ID, 'Last Name', true); ?>
-            <?php $song_url= get_field('individual_song'); ?>            
-            <p class="song-button-container"><?php echo do_shortcode("[ap_hap_addtrack id='1' label='song' track_type='local'  mp3='".$song_url."']"); ?></p>
+            <!-- Get Track URL -->
+            <p class="song-button-container">
+                <?php $song_url= get_field('individual_song'); ?>            
+                <?php echo do_shortcode("[ap_hap_addtrack id='1' label='HIDE ME' track_type='local'  mp3='".$song_url."']"); ?>
+            </p>
 
             <!-- Tribute Header -->
             <div class="container-fluid nfp-tribute-header">
@@ -97,7 +96,20 @@
                 <div class="row justify-content-center">
                     <div class="col-md-7 col-sm-10 col-xs-12" align="center">
                         <span class="nfp-tribute-song-title"><?php echo get_field('individual_song_title') ?></span>
-                        <p><?php echo do_shortcode('[ap_hap_play id="1" label="Play Track"]'); ?></p>
+
+                                <!-- Create Play Button Text -->
+                                <?php 
+                                    $playButtonText = 'Play ';
+
+                                    if (get_field('individual_nickname') === '-' ){
+                                        $playButtonText = get_field('individual_first_name') . 's';
+                                    } else {
+                                        $playButtonText = get_field('individual_nickname') . '"';
+                                    }
+                                ?>
+
+                        <p><?php echo do_shortcode('[ap_hap_play id="1" label="Play"]'); ?></p>
+                        <br>
                         <span class="nfp-tribute-song-lyrics"><?php echo get_field('individual_song_lyrics') ?></span>
                     </div>
                 </div>

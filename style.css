@@ -35,7 +35,7 @@
 6. Individual Tribute
     6a. Header Container
     6b. Name, Date, and Tagline
-    6c. Song Title and Song Lyrics
+    6c. Song Title, Play Button, and Song Lyrics
 7. Contact
 ***************************************************************************************************/
 
@@ -432,7 +432,7 @@ hr.nfp-tribute-hr {
 }
 
 /*-------------------------------------------------------------------------------------------------
-# 6c. Song Title and Lyrics
+# 6c. Song Title, Play Button, and Lyrics
 -------------------------------------------------------------------------------------------------*/
 .nfp-tribute-song-title {
     color: #e3dacd;
@@ -452,17 +452,10 @@ hr.nfp-tribute-hr {
     text-align: center;
 }
 
-/*-------------------------------------------------------------------------------------------------
-# 6b. Song
--------------------------------------------------------------------------------------------------*/
 .song-button-container {
+    /* This is a hack to accomodate the player we are using. We are hiding the uselesss info*/
     display: none;
 }
-
-
-
-
-
 
 
 
