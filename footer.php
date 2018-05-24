@@ -52,7 +52,7 @@
                 <div class="row justify-content-center py-3">
                     
                     <!-- Create Player -->
-                    <?php echo do_shortcode('[ap_hap 
+                    <!-- <?php echo do_shortcode('[ap_hap 
                         id="1" 
                         preset="dark" 
                         use_playlist_selector="1" 
@@ -72,7 +72,7 @@
                         auto_open_player_in_popup="0" 
                         auto_update_window_data="0" 
                         sound_id="tPlayer"]'); 
-                    ?>
+                    ?> -->
                 </div>
 
             </div>

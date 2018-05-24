@@ -17,8 +17,8 @@
 
             <!-- Get Track URL -->
             <p class="song-button-container">
-                <?php $song_url= get_field('individual_song'); ?>            
-                <?php echo do_shortcode("[ap_hap_addtrack id='1' label='HIDE ME' track_type='local'  mp3='".$song_url."']"); ?>
+                          
+                <!-- <?php echo do_shortcode("[ap_hap_addtrack id='1' label='HIDE ME' track_type='local'  mp3='".$song_url."']"); ?> -->
             </p>
 
             <!-- Tribute Header -->
@@ -99,6 +99,12 @@
             <div class="container py-3">
                 <div class="row justify-content-center">
                     <div class="col-md-7 col-sm-10 col-xs-12" align="center">
+                    <div>
+                    <audio controls>
+                        <source src="<?php echo get_field('individual_song'); ?>" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    </div>
                         <span class="nfp-tribute-song-title"><?php echo get_field('individual_song_title') ?></span>
 
                                 <!-- Create Play Button Text -->
@@ -112,7 +118,9 @@
                                     }
                                 ?>
 
-                        <p><?php echo do_shortcode('[ap_hap_play id="1" label="Play"]'); ?></p>
+                        <!-- <p><?php echo do_shortcode('[ap_hap_play id="1" label="Play"]'); ?></p> -->
+
+
                         <br>
                         <span class="nfp-tribute-song-lyrics"><?php echo get_field('individual_song_lyrics') ?></span>
                     </div>
