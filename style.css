@@ -33,6 +33,9 @@
     5c. Tribute Cards
     5d. Clear Button and Loading Indicator
 6. Individual Tribute
+    6a. Header Container
+    6b. Name, Date, and Tagline
+    6c. Song Title and Song Lyrics
 7. Contact
 ***************************************************************************************************/
 
@@ -52,7 +55,7 @@ body {
     /* The Navbar has a 'fixed-top placement' to keep it in view at all times. A consequence 
     of that is that it covers the top of the body. We add to the margin to compensate for that. 
     Any adjustments to the size of the NfP Navbar may requires corresponding adjustments here.*/
-    margin-top: 100px; 
+    margin-top: 80px; 
 }
 
 h1 {
@@ -109,7 +112,7 @@ hr {
 -------------------------------------------------------------------------------------------------*/
 .nfp-logo {
     font-family: 'Pinyon Script', cursive;
-    font-size: 60px;
+    font-size: 50px;
     color: #e4dad0;
 }
 
@@ -117,7 +120,7 @@ hr {
     /* Using the Great Vibes font, the 'for' in "Notes for Peace" is massive. 
     The nfp-logo2 class is used to tone it down.*/
     font-family: 'Pinyon Script', cursive;
-    font-size: 55px;
+    font-size: 45px;
     color: #e4dad0;
 }
 
@@ -127,7 +130,7 @@ hr {
 .nfp-navbar .navbar-nav > li {
     /* Add top margin to Bottom align the Links to the Logo. Adjustments to the Logo sizing 
     will requires changes to this value */
-    margin-top: 30px; 
+    margin-top: 10px; 
 }
 
 .nfp-navbar .navbar-nav > li > a {
@@ -167,12 +170,12 @@ hr {
 }
 
 .icon-bar {
-	width: 22px; 
-	height: 2px;
-	background-color: #e4dad0;
-	display: block;
-	transition: all 0.2s;
-	margin-top: 4px
+    width: 22px; 
+    height: 2px;
+    background-color: #e4dad0;
+    display: block;
+    transition: all 0.2s;
+    margin-top: 4px
 }
 
 .navbar-toggler .top-bar {
@@ -382,10 +385,11 @@ label {
 #################################################################################################*/
 
 /*-------------------------------------------------------------------------------------------------
-# 6a. Header
+# 6a. Header Container
 -------------------------------------------------------------------------------------------------*/
-.song-button-container {
-    display: none;
+.nfp-tribute-header {
+    background-color: #000000;
+    border-bottom: 1px solid #393838;
 }
 
 .vertical-align {
@@ -393,87 +397,78 @@ label {
     align-items: center;
 }
 
-.individual-information h1 {
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-.individual-information h2 {
-    text-align: center;
-}
-
-.individual-information p {
-    text-align: center;
-    padding-bottom: 0;
-    margin: 0;
-}
-
 /*-------------------------------------------------------------------------------------------------
-# 6b. Header
+# 6b. Name, Date, and Tagline
 -------------------------------------------------------------------------------------------------*/
-
-
-
-
-
-.individual-section-titles {
-    margin-bottom: 10px;
-}
-
-.nav-item{
-    height: 40px;
-}
-.nav-item>.active {
-    background: none !important;
-}
-
-.nav-link {
-    color: #e3dacd;
-    font-size: 25px;
+.nfp-tribute-name {
+    color: #FFFFFF;
     font-family: 'Libre Baskerville', serif;
-    font-style: 'regular';
+    font-size: 30px;
     letter-spacing: 0.02em;
+    text-align: center;
     text-transform: uppercase;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+    margin: 0;
 }
 
-/*instead of putting it within the link, could put it after and do active + .link-border-bottom*/
-.active>hr, .individual-information hr, .section-divider {
-    width: 80%;
+.nfp-tribute-dates {
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 27px;
+    text-align: center;
+}
+
+hr.nfp-tribute-hr {
+    width: 50%;
     height: 2px;
     margin: 0px auto;
     border-bottom: 2px solid rgb(193, 124, 116);
     padding: 0 !important;
 }
-.individual-information hr {
-    width: 50%;
-    margin-bottom: 30px;
+
+.nfp-tribute-tagline {
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 300; 
+    text-align: center;
 }
-#pills-tab {
-    margin: 0 !important;
+
+/*-------------------------------------------------------------------------------------------------
+# 6c. Song Title and Lyrics
+-------------------------------------------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------------------------------------------
+# 6b. Song
+-------------------------------------------------------------------------------------------------*/
+.song-button-container {
+    display: none;
 }
-.lyrics {
-    text-align: center !important;
-}
-.about-individual img{
-    margin-top:10px;
-}
+
+
+
+
+
+
 
 
 /*#################################################################################################
 # 7. Contact Form
 #################################################################################################*/
 #wpforms-submit-212 {
-	background-color: #220706;
-	color: #ffffff;
+    background-color: #220706;
+    color: #ffffff;
 }
 
 #wpforms-212 {
-	font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 17px;
     font-weight: 100;
     letter-spacing: 0.05em;
     color: #e3dacd; 
 }
+
