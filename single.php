@@ -25,9 +25,13 @@
             <div class="container-fluid nfp-tribute-header">
                 <div class="row align-items-center">
 
-                    <!-- Individual's Image -->
+                    <!-- Individual's Image Carousel -->
                     <div class="col-sm-6">
-                        <img src="<?php echo get_field('individual_featured_photo') ?>" class="img-fluid">
+                        <?php 
+                            global $post;
+                            $post_slug=$post->post_name;
+                        ?>
+                        <?php masterslider($post_slug); ?>
                     </div>
 
                     <!-- Individual's Information -->
