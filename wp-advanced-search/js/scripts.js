@@ -30,6 +30,11 @@ jQuery(document).ready(function($) {
         $(this).parents('form').submit();
     });
 
+    $('form.wpas-autosubmit :input').change(function() {
+        $(this).parents('form').submit();
+    });
+
+
     $('button.wpas-clear').click(function(e) {
         e.preventDefault();
         $(this).parents('form').find(':input')
