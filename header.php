@@ -36,10 +36,10 @@
     <body <?php body_class(); ?> >
 
         <!-- NfP Navbar -->
-        <nav id="notajaxcontent" class="navbar navbar-expand-sm fixed-top nfp-navbar py-0">
+        <nav class="navbar navbar-expand-sm fixed-top nfp-navbar py-0">
 
             <!-- NfP Logo -->
-            <a class="navbar-brand mr-auto" href="<?php echo get_site_url(); ?>/">
+            <a class="navbar-brand mr-auto" href="<?php echo get_site_url(); ?>">
                 <span class="navbar-tex nfp-logo">notes <span class="navbar-tex nfp-logo2">for</span> peace</span>
             </a>
 

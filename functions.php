@@ -11,12 +11,6 @@
     }
     add_action('wp_enqueue_scripts', 'enqueue_nfp_scripts');
 
-    function enqueue_player_scripts(){
-        wp_register_script('custom_script', get_stylesheet_directory_uri() . '/loadsong.js', array( 'jquery' ) );
-        wp_enqueue_script('custom_script');
-    }
-    add_action('wp_footer', 'enqueue_player_scripts');
-
 
     //---------------------------------------------------------------------------------------------
     // Initialize the NFP Theme
@@ -46,25 +40,6 @@
     }
     add_action('after_setup_theme', 'nfp_setup' );
 
-
-    //---------------------------------------------------------------------------------------------
-    // Wordpress has a built-in feature called widgets where we can add functionality like 
-    // displaying a list of page links in our site, or having a live chat box inside of the 
-    //sidebar. First, we have to "register" the sidebar so that Wordpress is aware of it and 
-    // ready to use it.
-    //---------------------------------------------------------------------------------------------
-    function nfp_widgets() {
-        register_sidebar( array(
-            'name'          => __( 'Sidebar', 'customtheme' ),
-            'id'            => 'sidebar-1',
-            'description'   => __( 'Add widgets here to appear in the sidebar', 'nfp' ),
-            'before_widget' => '<section id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</section>',
-            'before_title'  => '<h2 class="widget-title">',
-            'after_title'   => '</h2>'
-        ) );
-    }
-    add_action( 'widgets_init', 'nfp_widgets' );
 
 
     //---------------------------------------------------------------------------------------------
@@ -155,15 +130,4 @@
     add_action('init', 'facetedSearch');
 
     
-    //---------------------------------------------------------------------------------------------
-    // This function takes the text and images in the "About" section of each individual tribute
-    // page and moves them side-by-side (on a computer, not mobile)
-    //---------------------------------------------------------------------------------------------
-    function rearrange_about() {
-        //get all about-individual>p classes
-        //move them into about-text
-        //get all about-individual>img classes
-        //move them into about-images
-    }
-    add_action( 'init', 'rearrange_about' );
 ?>

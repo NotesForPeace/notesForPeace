@@ -13,42 +13,40 @@
 
 <?php get_header(); ?>
 
-		<div id="ajaxcontent">
 
-			<!-- Tributes Page Header -->
-			<?php if ( have_posts() ) : ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+		<!-- Tributes Page Header -->
+		<?php if ( have_posts() ) : ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-					<div class="container pt-4">
-						<div class="row justify-content-center">
-							<div class="col">
-								<h1 class="text-center"><?php the_title(); ?></h1>   
-							</div>
+				<div class="container pt-4">
+					<div class="row justify-content-center">
+						<div class="col">
+							<h1 class="text-center"><?php the_title(); ?></h1>   
 						</div>
 					</div>
-
-				<?php endwhile; ?>
-			<?php endif; ?>
-
-			<!-- Tributes Search and Results -->	
-			<?php $search = new WP_Advanced_Search('tributeSearch');?>
-			<div class="container search-pane-nfp">
-
-				<!-- Keyword and Faceted Search -->
-				<div class="row justify-content-center">
-					<div id="facetedSearch" class="col-9">
-						<?php $search->the_form(); ?>
-					</div>
 				</div>
-					
-				<!-- Results -->
-				<div class="row">
-					<div class="col-12">
-						<div id="wpas-results"></div> 
-					</div>
+
+			<?php endwhile; ?>
+		<?php endif; ?>
+
+		<!-- Tributes Search and Results -->	
+		<?php $search = new WP_Advanced_Search('tributeSearch');?>
+		<div class="container search-pane-nfp">
+
+			<!-- Keyword and Faceted Search -->
+			<div class="row justify-content-center">
+				<div id="facetedSearch" class="col-9">
+					<?php $search->the_form(); ?>
 				</div>
 			</div>
-			
+				
+			<!-- Results -->
+			<div class="row">
+				<div class="col-12">
+					<div id="wpas-results"></div> 
+				</div>
+			</div>
 		</div>
+
 
 <?php get_footer(); ?>

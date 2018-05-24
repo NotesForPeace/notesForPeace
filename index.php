@@ -15,8 +15,9 @@
  */
 
  ?>
-<?php get_header(); ?>
-    <div id="ajaxcontent">
+        <?php get_header(); ?>
+
+
         <!-- Homepage Carousel -->
         <div class="container-fluid">
             <?php masterslider("homepage"); ?>
@@ -31,5 +32,6 @@
                 </div>
             </div>
         </div>
-    </div>
-<?php get_footer(); ?>
+
+
+        <?php get_footer(); ?>
