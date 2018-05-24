@@ -19,7 +19,7 @@
             <?php global $post; ?>
             <?php $firstname = get_post_meta($post->ID, 'First Name', true); ?>
             <?php $lastname = get_post_meta($post->ID, 'Last Name', true); ?>
-            <?php $song_url='http://notesforpeace.org/wp-content/uploads/ap-hap-file-dir/' . $firstname . '_' . $lastname . '.mp3'; ?>
+            <?php $song_url= get_field('individual_song'); ?>            
             <p class="song-button-container"><?php echo do_shortcode("[ap_hap_addtrack id='1' label='song' track_type='local'  mp3='".$song_url."']"); ?></p>
 
             <!-- Tribute Header -->
