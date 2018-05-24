@@ -13,27 +13,28 @@ var __WPAS = {
     }
 };
 
+// This is an RPK (tm) edit
+var SEARCH_CONTAINER_HEIGHT = 0;
+
 jQuery(document).ready(function($) {
 
     __WPAS.FORM_ID = $('#wpas-id').val();
     __WPAS.HASH = $(__WPAS.FORM).data('ajax-url-hash');
     var CURRENT_PAGE = 1;
 
-    // This is an RPK (tm) edit
-    var SEARCH_CONTAINER_HEIGHT = 0;
-
     /**
      *  Event listeners
      */
 
-    $('form.wpas-autosubmit :input').keyup(function() {
-        $(this).parents('form').submit();
+    jQuery('form.wpas-autosubmit :input').keyup(function(event) {
+        jQuery(this).parents('form').submit();
     });
 
-    $('form.wpas-autosubmit :input').change(function() {
-        $(this).parents('form').submit();
+    jQuery('form.wpas-autosubmit :input').change(function(event) {
+        if (event.currentTarget.type=='checkbox'){
+            jQuery(this).parents('form').submit();
+        }
     });
-
 
     $('button.wpas-clear').click(function(e) {
         e.preventDefault();
@@ -305,6 +306,7 @@ jQuery(document).ready(function($) {
         }
         
         e.preventDefault();
+        
         if (formLocked()) return;
         lockForm();
         submitForm(this);

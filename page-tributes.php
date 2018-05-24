@@ -32,7 +32,7 @@
 
 			<!-- Tributes Search and Results -->	
 			<?php $search = new WP_Advanced_Search('tributeSearch');?>
-			<div class="container">
+			<div class="container search-pane-nfp">
 
 				<!-- Keyword and Faceted Search -->
 				<div class="row justify-content-center">
