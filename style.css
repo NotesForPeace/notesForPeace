@@ -36,6 +36,7 @@
     6b. Name, Date, and Tagline
     6c. Song Title, Play Button, and Song Lyrics
 7. Contact
+8. Partners
 ***************************************************************************************************/
 
 
@@ -65,10 +66,11 @@ h1 {
 }
 
 h2 {
-    color: #e3dacd;
+    color: rgb(167, 151, 127);
     font-family: 'Roboto', sans-serif;
-    font-size: 25px;
-    font-weight: 300; 
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: uppercase;
 }
 
 h3 {
@@ -90,7 +92,16 @@ p {
 hr {
     width: 50%;
     margin-bottom: 30px;
-}     
+}
+
+a {
+    color: #483836;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 27px;
+}
 
 
 
