@@ -75,10 +75,13 @@
 
                     <!-- Tagline -->
                     <div class="row justify-content-center">
-                        <div class="col-sm-12">
-                            <div class="nfp-tribute-tagline py-3">
-                                <span><?php echo get_field('individual_tagline') ?></span>
-                            </div>
+                        <div class="col-sm-12" align="center">
+                            <br>
+                            <br>
+                            <audio controls>
+                                <source src="<?php echo get_field('individual_song'); ?>" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
                         </div>
                     </div>
                 </div>
@@ -86,7 +89,9 @@
         </div>
 
         <!-- Divider -->
-        <div class="d-none d-md-block" style="margin-top: 10px; border-top: 4px solid #e3dacd;"></div>
+        <div class="container-fluid py-0">
+            <div class="d-none d-md-block" style="margin-top: 10px; border-top: 4px solid #e3dacd;"></div>
+        </div>
 
         <!-- Song, Song Title, and Lyrics -->
         <div class="container py-3">
