@@ -97,8 +97,6 @@
         <div class="container py-3">
             <div class="row justify-content-center">
                 <div class="col-md-7 col-sm-10 col-xs-12" align="center">
-                    <br>
-                    <br>
                     <!-- Song Title and Lyrics -->
                     <span class="nfp-tribute-song-title"><?php echo get_field('individual_song_title') ?></span>
                     <br>
