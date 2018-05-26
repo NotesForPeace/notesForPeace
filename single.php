@@ -77,11 +77,11 @@
                     <div class="row justify-content-center">
                         <div class="col-sm-12" align="center">
                             <br>
-                            <br>
                             <audio controls>
                                 <source src="<?php echo get_field('individual_song'); ?>" type="audio/mpeg">
                                 Your browser does not support the audio element.
                             </audio>
+                            <br>
                         </div>
                     </div>
                 </div>
@@ -97,13 +97,8 @@
         <div class="container py-3">
             <div class="row justify-content-center">
                 <div class="col-md-7 col-sm-10 col-xs-12" align="center">
-                    
-                    <!-- Song -->
-                    <audio controls>
-                        <source src="<?php echo get_field('individual_song'); ?>" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio><br><br>
-
+                    <br>
+                    <br>
                     <!-- Song Title and Lyrics -->
                     <span class="nfp-tribute-song-title"><?php echo get_field('individual_song_title') ?></span>
                     <br>
