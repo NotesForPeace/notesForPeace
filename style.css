@@ -58,6 +58,10 @@ body {
     margin-top: 80px; 
 }
 
+@media (max-width: 724px) {
+    body{margin-top: 78px;}
+}
+
 h1 {
     color: #200d0c;
     font-family: 'Libre Baskerville', serif;
@@ -126,8 +130,9 @@ a {
     color: #e4dad0;
 }
 
-@media (max-width: 370px) {
+@media (max-width: 724px) {
     .nfp-logo{font-size: 40px;}
+    .nfp-logo2{font-size: 35px;}
 }
 
 .nfp-logo2 {
