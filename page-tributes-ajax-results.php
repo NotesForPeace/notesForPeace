@@ -32,7 +32,7 @@
                                 <div class="nfp-card-wrapper">
                                     <a href="<?php the_permalink(); ?>">
                                         <div class="card mb-4 nfp-tribute-card">
-                                            <img class="card-img-top nfp-tribute-card-image" src="<?php echo get_field('loved_one_1_photo') ?>">
+                                            <img class="card-img-top nfp-tribute-card-image" src="<?php echo the_post_thumbnail(); ?>
                                             <p><?php echo $thumbnailCaption ?></p>
                                         </div>
                                     </a>

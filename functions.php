@@ -32,6 +32,7 @@
 
         //Allow for a post, page, or custom post type to have afeatured images (also called Post Thumbnails). 
         add_theme_support( 'post-thumbnails' );
+        set_post_thumbnail_size( 198, 132 ); // 50 pixels wide by 50 pixels tall, resize mode
 
         //Theme Markup is a theme feature that allows themes to explicitly choose to 
         //apply HTML5 markup for search forms, comment forms, comment lists, gallery and caption.

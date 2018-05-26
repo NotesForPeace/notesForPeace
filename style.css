@@ -126,6 +126,10 @@ a {
     color: #e4dad0;
 }
 
+@media (max-width: 370px) {
+    .nfp-logo{font-size: 40px;}
+}
+
 .nfp-logo2 {
     /* Using the Great Vibes font, the 'for' in "Notes for Peace" is massive. 
     The nfp-logo2 class is used to tone it down.*/
