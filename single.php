@@ -99,6 +99,9 @@
                 <div class="col-md-7 col-sm-10 col-xs-12" align="center">
                     <!-- Song Title and Lyrics -->
                     <span class="nfp-tribute-song-title"><?php echo get_field('individual_song_title') ?></span>
+                    <p>
+                        <?php echo get_field('loved_one_1_first_name') ?> <?php echo get_field('loved_one_1_last_name') ?> 
+                    </p>
                     <br>
                     <span class="nfp-tribute-song-lyrics"><?php echo get_field('individual_song_lyrics') ?></span>
 
