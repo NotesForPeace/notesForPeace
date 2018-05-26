@@ -55,11 +55,10 @@ body {
     /* The Navbar has a 'fixed-top placement' to keep it in view at all times. A consequence 
     of that is that it covers the top of the body. We add to the margin to compensate for that. 
     Any adjustments to the size of the NfP Navbar may requires corresponding adjustments here.*/
-    margin-top: 80px; 
+    margin-top: 86px; 
 }
-
 @media (max-width: 724px) {
-    body{margin-top: 78px;}
+    body{margin-top: 71px;}
 }
 
 h1 {
@@ -130,11 +129,6 @@ a {
     color: #e4dad0;
 }
 
-@media (max-width: 724px) {
-    .nfp-logo{font-size: 40px;}
-    .nfp-logo2{font-size: 35px;}
-}
-
 .nfp-logo2 {
     /* Using the Great Vibes font, the 'for' in "Notes for Peace" is massive. 
     The nfp-logo2 class is used to tone it down.*/
@@ -143,6 +137,16 @@ a {
     color: #e4dad0;
 }
 
+.nfp-navbar > a {
+    font-weight: 100;
+}
+
+@media (max-width: 724px) {
+    .nfp-logo{font-size: 40px;}
+    .nfp-logo2{font-size: 35px;}
+}
+
+
 /*-------------------------------------------------------------------------------------------------
 # 2c. Navbar Links
 -------------------------------------------------------------------------------------------------*/
@@ -150,6 +154,9 @@ a {
     /* Add top margin to Bottom align the Links to the Logo. Adjustments to the Logo sizing 
     will requires changes to this value */
     margin-top: 10px; 
+}
+@media (max-width: 724px) {
+    .nfp-navbar .navbar-nav > li {margin-top: 7px;} 
 }
 
 .nfp-navbar .navbar-nav > li > a {

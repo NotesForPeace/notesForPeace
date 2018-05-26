@@ -40,7 +40,7 @@
 
             <!-- NfP Logo -->
             <a class="navbar-brand mr-auto" href="<?php echo get_site_url(); ?>">
-                <span class="navbar-tex nfp-logo">notes <span class="navbar-tex nfp-logo2">for</span> peace</span>
+                <span class="nfp-logo">notes <span class="nfp-logo2">for</span> peace</span>
             </a>
 
             <!-- Hamburger Menu -->
