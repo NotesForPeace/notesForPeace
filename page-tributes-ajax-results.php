@@ -27,6 +27,13 @@
 
                                     //Add last name
                                     $thumbnailCaption = $thumbnailCaption . ' ' . get_field('individual_last_name');
+
+                                    //Add suffix, if applicable
+                                    if (get_field('individual_name_suffix') === '-' ){
+                                    } else {
+                                        $thumbnailCaption = $thumbnailCaption . ', ' . get_field('individual_name_suffix');
+                                    }
+
                                 ?>
 
                                 <div class="nfp-card-wrapper">
