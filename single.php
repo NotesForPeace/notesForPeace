@@ -99,13 +99,25 @@
                 <div class="col-md-7 col-sm-10 col-xs-12" align="center">
                     <!-- Song Title and Lyrics -->
                     <span class="nfp-tribute-song-title"><?php echo get_field('individual_song_title') ?></span>
-                    <p>
-                        <?php echo get_field('loved_one_1_first_name') ?> <?php echo get_field('loved_one_1_last_name') ?> 
-                    </p>
+                    <p><?php echo get_field('loved_one_name') ?></p>
                     <br>
                     <span class="nfp-tribute-song-lyrics"><?php echo get_field('individual_song_lyrics') ?></span>
 
                 </div>
+            </div>
+        </div>
+
+        <!-- Previous and Next Links -->
+        <div class="container py-3">
+            <div class="row justify-content-center">
+                <div class="col-4" align="center">
+                    <?php previous_post_link(); ?>
+                </div>
+                <div class="col-4" align="center">
+                </div>
+                <div class="col-4" align="center">
+                    <?php next_post_link(); ?>
+                </div> 
             </div>
         </div>
 
