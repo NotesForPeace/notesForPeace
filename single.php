@@ -73,7 +73,7 @@
                         </div>
                     </div>
 
-                    <!-- Tagline -->
+                    <!-- Song -->
                     <div class="row justify-content-center">
                         <div class="col-sm-12" align="center">
                             <br>
@@ -89,9 +89,7 @@
         </div>
 
         <!-- Divider -->
-        <div class="container-fluid py-0">
-            <div class="d-none d-md-block" style="margin-top: 10px; border-top: 4px solid #e3dacd;"></div>
-        </div>
+        <div class="d-none d-md-block" style="margin-top: 0px; border-top: 4px solid #e3dacd;"></div>
 
         <!-- Song, Song Title, and Lyrics -->
         <div class="container py-3">
