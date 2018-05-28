@@ -11,6 +11,14 @@
  */
 ?>
 
+<?php
+function enqueue_audio_scripts() {
+    wp_enqueue_script( 'audio_player', get_template_directory_uri() . '/audio_player.js', array(), true );
+}
+add_action('wp_enqueue_scripts', 'enqueue_audio_scripts');
+
+?>
+
 <?php get_header(); ?>
 
 
@@ -77,10 +85,28 @@
                     <div class="row justify-content-center">
                         <div class="col-sm-12" align="center">
                             <br>
-                            <audio controls>
-                                <source src="<?php echo get_field('individual_song'); ?>" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
+
+                            <div class="audio-player">
+                            <button id="play-btn" class="playpause button">
+
+                            </button>
+                                <div class="audio-wrapper" id="player-container" href="javascript:;">
+                                <audio id="player" ontimeupdate="initProgressBar()">
+                                        <source src="<?php echo get_field('individual_song'); ?>" type="audio/mp3">
+                                        </audio>
+                                </div>
+                                
+                                <div class="player-controls scrubber">
+                                <span class="start-time audio-time"></span>
+                                <span class="audio-time"> / </span>
+                                <span class="end-time audio-time"></span>
+                                <span id="seekObjContainer">
+                                    <progress id="seekObj" value="0" max="1"></progress>
+                                </span>
+
+
+                                </div>
+                            </div>
                             <br>
                         </div>
                     </div>
