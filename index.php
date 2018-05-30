@@ -24,9 +24,9 @@
         </div>
 
         <!-- Mission Statement -->
-        <div class="container-fluid py-3">
+        <div class="container-fluid py-2">
             <div class="row justify-content-center">
-                <div class="col-md-7 col-sm-10 col-xs-12" align="center">
+                <div class="col-md-8 col-sm-10 col-xs-12" align="center">
                     <h1>our mission</h1>
                     <p>We are coping with a terrible epidemic of gun violence. While a parent may never move past the loss of their child, we join together in community to create a more peaceful Chicago. We write songs to remember our loved ones. We write songs to share our stories since music communicates directly to the soul.</p>
                 </div>
