@@ -78,10 +78,10 @@
                                     'results_template'       => 'page-tributes-ajax-results.php', // This file must exist in your theme root
                                     'button_text'            => 'Load More Results'));
 
-        $args['fields'][] = array( 
-            'type'  => 'reset',
-            'class' => 'button',
-            'value' => 'CLEAR' );
+        // $args['fields'][] = array( 
+        //     'type'  => 'reset',
+        //     'class' => 'button',
+        //     'value' => 'CLEAR' );
 
 
         $args['fields'][] = array( 
