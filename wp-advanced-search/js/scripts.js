@@ -189,6 +189,14 @@ jQuery(document).ready(function($) {
                     storeInstance();
                     unlockForm();
 
+                    // Check to see whether the search was for the 
+                    // thing in the search box (this should fix timing bugs)
+                    var search_results =  jQuery('#facetedSearch').attr('search_params');
+                    var current_search_input = jQuery(__WPAS.FORM).serialize();
+                    if (current_search_input!=search_results){
+                        jQuery(__WPAS.FORM).submit();
+                    }
+
                 }, T);
 
             },
@@ -304,9 +312,9 @@ jQuery(document).ready(function($) {
         if (SEARCH_CONTAINER_HEIGHT < container_height){
             jQuery('.search-pane-nfp').css('min-height',container_height+'px');
         }
+        jQuery('#facetedSearch').attr('search_params',$(this).serialize())
         
         e.preventDefault();
-        
         if (formLocked()) return;
         lockForm();
         submitForm(this);
