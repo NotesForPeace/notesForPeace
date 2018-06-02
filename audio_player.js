@@ -89,5 +89,5 @@ function initPlayers(num) {
 
 jQuery(document).ready(function(){
     initPlayers(jQuery('#player-container').length);
-    document.getElementById('player').addEventListener('canplaythrough',initProgressBar,false);
+    document.getElementById('player').addEventListener('canplay',initProgressBar,false);
 });

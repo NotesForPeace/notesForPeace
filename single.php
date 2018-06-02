@@ -87,25 +87,45 @@ add_action('wp_enqueue_scripts', 'enqueue_audio_scripts');
                             <br>
 
                             <div class="audio-player">
-                            <button id="play-btn" class="playpause button">
 
-                            </button>
-                                <div class="audio-wrapper" id="player-container" href="javascript:;">
-                                <audio id="player" ontimeupdate="initProgressBar()">
-                                        <source src="<?php echo get_field('individual_song'); ?>" type="audio/mp3">
-                                        </audio>
+                                <div class="col-3">
                                 </div>
-                                
-                                <div class="player-controls scrubber">
-                                <span class="start-time audio-time"></span>
-                                <span class="audio-time"> / </span>
-                                <span class="end-time audio-time"></span>
-                                <span id="seekObjContainer">
-                                    <progress id="seekObj" value="0" max="1"></progress>
-                                </span>
+                                <div class="col-6">
+                                    <div class='row'>
+                                        <div class="col-3">
+                                            <button id="play-btn" class="playpause button"></button>
+                                        </div>
+                                        <div class="col-9">
+                                            <div class='row justify-content-between'>
+                                                <div class="col-xs-2 ml-3">
+                                                    <div class="start-time audio-time"></div>
+                                                </div>
 
-
+                                                <div class="col-xs-2 mr-3">
+                                                    <div class="end-time audio-time"></div>
+                                                </div>
+                                            </div>
+                                            <div class='row progress-row'>
+                                                <div class='col-12'>
+                                                    <div class="audio-wrapper " id="player-container" href="javascript:;">
+                                                        <audio id="player" ontimeupdate="initProgressBar()">
+                                                                <source src="<?php echo get_field('individual_song'); ?>" type="audio/mp3">
+                                                        </audio>
+                                                        <div class="player-controls scrubber">
+                                                            <div id="seekObjContainer">
+                                                                <progress id="seekObj" value="0" max="1"></progress>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="col-3">
+                                </div>
+
+                            </div>
                             </div>
                             <br>
                         </div>

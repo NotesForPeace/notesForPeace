@@ -479,29 +479,6 @@ hr.nfp-tribute-hr {
     text-align: center;
 }
 
-
-.audio-player {
-
-    width: 50%;
-    text-align: center;
-    display: flex;
-    flex-flow: row;
-    height: 35px;
-  }
-  .audio-player .album-image {
-    min-height: 100px;
-    width: 110px;
-    background-size: cover;
-  }
-  /* .audio-player .player-controls {
-    align-items: center;
-    justify-content: center;
-    margin-top: 2.5rem;
-    flex: 3;
-  } */
-  .audio-player .player-controls progress {
-    /* width: 90%; */
-  }
   .audio-player .player-controls progress[value] {
     -webkit-appearance: none;
     appearance: none;
@@ -516,6 +493,8 @@ hr.nfp-tribute-hr {
     /* border: 1px solid #dfdfdf; */
     color: #e4dad0;
   }
+
+
   .audio-player .player-controls progress::-webkit-progress-value {
     background-color: #e4dad0;
   }
@@ -523,6 +502,13 @@ hr.nfp-tribute-hr {
     font-size: 1.6rem;
   }
 
+  #seekObjContainer{
+      width: 100%;
+  }
+  #seekObj{
+      text-align: center;
+    width: 100%;
+  }
   .button {
     border: 0;
     background: transparent;
@@ -548,8 +534,12 @@ hr.nfp-tribute-hr {
   .audio-time{
       line-height: 1.9;
       color: #e4dad0;
+      font-size: 80%;
+      height: 24px;
   }
-  
+  .progress-row{
+      margin-top: -10px;
+  }
 
 /*#################################################################################################
 # 7. Contact Form
@@ -565,4 +555,9 @@ hr.nfp-tribute-hr {
     font-weight: 100;
     letter-spacing: 0.05em;
     color: #e3dacd; 
+}
+
+.testing{
+    border-style: solid;
+    border-color: red;
 }
