@@ -52,6 +52,12 @@ add_action('wp_enqueue_scripts', 'enqueue_audio_scripts');
                                 } else {
                                     $individualDisplayName = $individualDisplayName . ' "' . get_field('individual_nickname') . '"';
                                 }
+                                
+                                //Add middle name, if applicable
+                                if (get_field('individual_middle_name') === '-' ){
+                                } else {
+                                    $individualDisplayName = $individualDisplayName . ' ' . get_field('individual_middle_name');
+                                }
 
                                 //Add last name
                                 $individualDisplayName = $individualDisplayName . ' ' . get_field('individual_last_name');
