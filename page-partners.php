@@ -139,7 +139,7 @@
             <img class="img-fluid" src="/wp-content/uploads/2018/06/todd-r.jpg" alt="" width="500" height="300" />
         </div>
         <div class="col-sm-12 col-md-6 col-lg-8">
-            <p>Todd Rosenberg is a Chicago-based photographer whose clients include the Chicago Symphony Orchestra, the National Football League, Hubbard Street Dance, Sports Illustrated and many others.</p>
+            <p><a href="http://toddrphoto.com/"><strong>Todd Rosenberg</strong></a> is a Chicago-based photographer whose clients include the Chicago Symphony Orchestra, the National Football League, Hubbard Street Dance, Sports Illustrated and many others.</p>
         </div>
     </div>
 
@@ -149,7 +149,7 @@
             <img class="img-fluid" src="/wp-content/uploads/2018/06/mat-lejeune.jpg" alt="" width="500" height="300" />
         </div>
         <div class="col-sm-12 col-md-6 col-lg-8">
-            <p>Mat Lejeune is a recording engineer with the Chicago Recording Company and an invaluable collaborator on this project.</p>
+            <p><a href="http://www.chicagorecording.com/mat-lejeune/"><strong>Mat Lejeune</strong></a> is a recording engineer with the Chicago Recording Company and an invaluable collaborator on this project.</p>
         </div>
     </div>
     
