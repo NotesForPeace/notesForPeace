@@ -115,7 +115,7 @@
     <!-- Musicians -->
     <div class="row py-3">
         <div class="col-sm-12 col-md-6 col-lg-4">
-            <img class="img-fluid" src="/wp-content/uploads/2018/05/Sarah-and-Allison-and-Takesha.jpg" alt="" width="500" height="300" />
+           <?php masterslider("musicians"); ?>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-8">
             <p>Under the visionary leadership of Zell Music Director Riccardo Muti and Judson and Joyce Green Consultant Yo-Yo Ma, the<a href="https://cso.org/institute/"><strong> Chicago Symphony Orchestra’s Negaunee Music Institute </strong></a>produces programs that educate audiences, train young musicians and serve the city of Chicago and the world through music.</p>
