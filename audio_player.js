@@ -67,6 +67,10 @@ function initPlayers(num) {
             jQuery(playBtn).toggleClass("paused");
           togglePlay()
         });
+
+        player.addEventListener('ended', function() {
+          jQuery(playBtn).toggleClass("paused");
+        });
       }
 
       // Controls & Sounds Methods
