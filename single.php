@@ -12,11 +12,10 @@
 ?>
 
 <?php
-function enqueue_audio_scripts() {
-    wp_enqueue_script( 'audio_player', get_template_directory_uri() . '/audio_player.js', array(), true );
-}
-add_action('wp_enqueue_scripts', 'enqueue_audio_scripts');
-
+    function enqueue_audio_scripts() {
+        wp_enqueue_script( 'audio_player', get_template_directory_uri() . '/audio_player.js', array(), true );
+    }
+    add_action('wp_enqueue_scripts', 'enqueue_audio_scripts');
 ?>
 
 <?php get_header(); ?>
@@ -173,9 +172,19 @@ add_action('wp_enqueue_scripts', 'enqueue_audio_scripts');
                 $posts[] += $post->ID;
             }
 
+            $postListSize = sizeof($postlist);
             $current = array_search($currentTributeID, $posts );
-            $prevID = $posts[$current-1];
-            $nextID = $posts[$current+1];
+
+            if ($current == 0) {
+                $prevID = $posts[$postListSize-1];
+                $nextID = $posts[1];
+            } elseif ($current == ($postListSize-1)) {
+                $prevID = $posts[$current-1];
+                $nextID = $posts[0];
+            } else {
+                $prevID = $posts[$current-1];
+                $nextID = $posts[$current+1];    
+            }
         ?>
         <div class="container py-3">
             <div class="row justify-content-center">
