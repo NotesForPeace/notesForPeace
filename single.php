@@ -31,6 +31,7 @@ add_action('wp_enqueue_scripts', 'enqueue_audio_scripts');
                     <?php 
                         global $post;
                         $post_slug=$post->post_name;
+                        $currentTributeID = get_the_ID();
                     ?>
                     <?php masterslider($post_slug); ?>
                 </div>
@@ -157,19 +158,40 @@ add_action('wp_enqueue_scripts', 'enqueue_audio_scripts');
             </div>
         </div>
 
+
+<?php
+    $postlist = get_posts(array(
+        'post_type'			=> 'tribute',
+        'posts_per_page'	=> -1,
+        'meta_key'			=> 'individual_last_name',
+        'orderby'			=> 'meta_value',
+        'order'				=> 'ASC'
+    ));
+
+    $posts = array();
+    foreach ( $postlist as $post ) {
+        $posts[] += $post->ID;
+    }
+
+    $current = array_search($currentTributeID, $posts );
+    $prevID = $posts[$current-1];
+    $nextID = $posts[$current+1];
+?>
+
+
+
         <!-- Previous and Next Links -->
         <div class="container py-3">
             <div class="row justify-content-center">
                 <div class="col-4" align="center">
-                    <?php previous_post_link(); ?>
+                    <?php echo '<a href="'.get_permalink( $prevID ).'">'.get_the_title( $prevID ).'</a>'; ?>
                 </div>
                 <div class="col-4" align="center">
                 </div>
                 <div class="col-4" align="center">
-                    <?php next_post_link(); ?>
+                <?php echo '<a href="'.get_permalink( $nextID ).'">'.get_the_title( $nextID ).'</a>'; ?>
                 </div> 
             </div>
         </div>
-
 
 <?php get_footer(); ?>
