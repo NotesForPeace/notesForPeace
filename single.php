@@ -157,30 +157,26 @@ add_action('wp_enqueue_scripts', 'enqueue_audio_scripts');
                 </div>
             </div>
         </div>
-
-
-<?php
-    $postlist = get_posts(array(
-        'post_type'			=> 'tribute',
-        'posts_per_page'	=> -1,
-        'meta_key'			=> 'individual_last_name',
-        'orderby'			=> 'meta_value',
-        'order'				=> 'ASC'
-    ));
-
-    $posts = array();
-    foreach ( $postlist as $post ) {
-        $posts[] += $post->ID;
-    }
-
-    $current = array_search($currentTributeID, $posts );
-    $prevID = $posts[$current-1];
-    $nextID = $posts[$current+1];
-?>
-
-
-
+ 
         <!-- Previous and Next Links -->
+        <?php
+            $postlist = get_posts(array(
+                'post_type'			=> 'tribute',
+                'posts_per_page'	=> -1,
+                'meta_key'			=> 'individual_last_name',
+                'orderby'			=> 'meta_value',
+                'order'				=> 'ASC'
+            ));
+
+            $posts = array();
+            foreach ( $postlist as $post ) {
+                $posts[] += $post->ID;
+            }
+
+            $current = array_search($currentTributeID, $posts );
+            $prevID = $posts[$current-1];
+            $nextID = $posts[$current+1];
+        ?>
         <div class="container py-3">
             <div class="row justify-content-center">
                 <div class="col-4" align="center">
