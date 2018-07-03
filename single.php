@@ -149,10 +149,22 @@
                 <div class="col-md-7 col-sm-10 col-xs-12" align="center">
                     <!-- Song Title and Lyrics -->
                     <span class="nfp-tribute-song-title"><em><?php echo get_field('individual_song_title') ?></em></span>
-                    <p> by <?php echo get_field('loved_one_name') ?>, arr. <?php echo get_field('individual_song_arranger') ?></p>
+
+                    <!-- Build Song Authors -->
+                    <?php 
+                        //Get loved one's name
+                        $author = get_field('loved_one_name');
+
+                        //Add composers
+                        if (get_field('individual_song_arranger') == 'Horan and Lee' ){
+                            $author = $author . ', Rex Horan, and Sara Lee';
+                        } else {
+                            $author = $author . ' and Joshua Fink';
+                        }
+                    ?>
+                    <p> by <?php echo $author ?></p>
                     <br>
                     <span class="nfp-tribute-song-lyrics"><?php echo get_field('individual_song_lyrics') ?></span>
-
                 </div>
             </div>
         </div>
